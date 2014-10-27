@@ -8,23 +8,6 @@ if 1 && filereadable($VIM . '/vimrc_local.vim')
   endif
 endif
 
-if 1 && exists('$HOME') && filereadable($HOME . '/.vimrc_first.vim')
-  unlet! g:vimrc_first_finish
-  source $HOME/.vimrc_first.vim
-  if exists('g:vimrc_first_finish') && g:vimrc_first_finish != 0
-    finish
-  endif
-endif
-
-for s:path in split(glob($VIM.'/plugins/*'), '\n')
-  if s:path !~# '\~$' && isdirectory(s:path)
-    let &runtimepath = &runtimepath.','.s:path
-  end
-endfor
-unlet s:path
-
-source $VIM/plugins/kaoriya/encode_japan.vim
-
 if !(has('win32') || has('mac')) && has('multi_lang')
   if !exists('$LANG') || $LANG.'X' ==# 'X'
     if !exists('$LC_CTYPE') || $LC_CTYPE.'X' ==# 'X'
@@ -61,7 +44,7 @@ endif
 set ignorecase
 set smartcase
 
-set tabstop=8
+set tabstop=4
 set noexpandtab
 set autoindent
 set backspace=indent,eol,start
@@ -80,8 +63,6 @@ set showcmd
 set title
 set background=dark
 colorscheme base16-tomorrow
-
-
 
 if filereadable($VIM . '/vimrc') && filereadable($VIM . '/ViMrC')
   set tags=./tags,tags
