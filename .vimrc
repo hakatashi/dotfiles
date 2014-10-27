@@ -62,7 +62,7 @@ set cmdheight=2
 set showcmd
 set title
 set background=dark
-colorscheme base16-tomorrow
+colorscheme base16-isotope
 
 if filereadable($VIM . '/vimrc') && filereadable($VIM . '/ViMrC')
   set tags=./tags,tags
@@ -95,16 +95,7 @@ if has('mac')
   set iskeyword=@,48-57,_,128-167,224-235
 endif
 
-
 set formatexpr=autofmt#japanese#formatexpr()
-
-if kaoriya#switch#enabled('disable-vimdoc-ja')
-  let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimdoc-ja"'), ',')
-endif
-
-if kaoriya#switch#enabled('disable-vimproc')
-  let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimproc$"'), ',')
-endif
 
 nmap <C-Tab> :tabn<CR>
 nmap <C-S-Tab> :tabp<CR>
