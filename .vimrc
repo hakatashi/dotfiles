@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+set nocompatible
+
 set ignorecase
 set smartcase
 set noexpandtab
@@ -23,8 +25,29 @@ set shiftwidth=4
 set encoding=utf-8
 set langmenu=ja_jp.utf-8
 set formatexpr=autofmt#japanese#formatexpr()
+set history=50
+set incsearch
 
 colorscheme base16-isotope
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+if has("autocmd")
+  filetype plugin indent on
+  augroup vimrcEx
+  au!
+  autocmd FileType text setlocal textwidth=78
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+  augroup END
+else
+  set autoindent
+endif
 
 if !(has('win32') || has('mac')) && has('multi_lang')
   if !exists('$LANG') || $LANG.'X' ==# 'X'
@@ -74,6 +97,10 @@ endif
 
 if has('win32') && $PATH !~? '\(^\|;\)' . escape($VIM, '\\') . '\(;\|$\)'
   let $PATH = $VIM . ';' . $PATH
+endif
+
+if has('mouse')
+  set mouse=a
 endif
 
 nmap <C-Tab> :tabn<CR>
