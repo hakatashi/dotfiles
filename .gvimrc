@@ -22,8 +22,6 @@ endif
 if has('multi_byte_ime') || has('xim')
   highlight CursorIM guibg=Purple guifg=NONE
   set iminsert=0 imsearch=0
-  if has('xim') && has('GUI_GTK')
-  endif
 endif
 
 if &guioptions =~# 'M'
