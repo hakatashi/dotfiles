@@ -43,8 +43,6 @@ endif
 
 set ignorecase
 set smartcase
-
-set tabstop=4
 set noexpandtab
 set autoindent
 set backspace=indent,eol,start
@@ -52,7 +50,6 @@ set wrapscan
 set showmatch
 set wildmenu
 set formatoptions+=mM
-
 set nonumber
 set ruler
 set nolist
@@ -62,6 +59,12 @@ set cmdheight=2
 set showcmd
 set title
 set background=dark
+set tabstop=4
+set shiftwidth=4
+
+set encoding=utf-8
+set langmenu=ja_jp.utf-8
+
 colorscheme base16-isotope
 
 if filereadable($VIM . '/vimrc') && filereadable($VIM . '/ViMrC')
