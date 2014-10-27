@@ -50,16 +50,6 @@ if 1 && !filereadable($VIMRUNTIME . '/menu.vim') && has('gui_running')
   set guioptions+=M
 endif
 
-if 1 && (!exists('g:no_vimrc_example') || g:no_vimrc_example == 0)
-  if &guioptions !~# "M"
-    set guioptions+=M
-    source $VIMRUNTIME/vimrc_example.vim
-    set guioptions-=M
-  else
-    source $VIMRUNTIME/vimrc_example.vim
-  endif
-endif
-
 if filereadable($VIM . '/vimrc') && filereadable($VIM . '/ViMrC')
   set tags=./tags,tags
 endif
