@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-10-31 15:59:02" build="141029">
+		<key name=".Vanilla" modified="2014-12-18 16:05:13" build="141216">
 			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -86,8 +86,14 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
-				<line data="{cmd (Admin)}"/>
 				<line data="{cmd}"/>
+				<line data="{cmd (Admin)}"/>
+				<line data="&quot;C:\WINDOWS\system32\cmd.exe&quot; /s /k pushd &quot;F:\Documents\elasticsearch&quot;"/>
+				<line data="cmd.exe"/>
+				<line data="&quot;C:\WINDOWS\System32\cmd.exe&quot;"/>
+				<line data="&quot;C:\WINDOWS\system32\cmd.exe&quot; /s /k pushd &quot;F:\Documents\node&quot;"/>
+				<line data="{bash}"/>
+				<line data="{Putty}"/>
 			</value>
 			<value name="SingleInstance" type="hex" data="01"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
@@ -139,11 +145,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000005b"/>
-			<value name="ConWnd Height" type="dword" data="0000001c"/>
+			<value name="ConWnd Width" type="dword" data="00000072"/>
+			<value name="ConWnd Height" type="dword" data="00000029"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="00000213"/>
-			<value name="ConWnd Y" type="dword" data="000001de"/>
+			<value name="ConWnd X" type="dword" data="0000022e"/>
+			<value name="ConWnd Y" type="dword" data="00000108"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -324,7 +330,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data=""/>
+			<value name="FindText" type="string" data="tbody"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -542,17 +548,17 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2014-10-31 15:59:02" build="141029">
+			<key name="Tasks" modified="2014-12-18 16:05:13" build="141216">
 				<value name="Count" type="dword" data="0000000b"/>
-				<key name="Task1" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task1" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
+					<value name="GuiArgs" type="string" data="/dir F:\Documents"/>
 					<value name="Cmd1" type="string" data="cmd.exe"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task2" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{cmd (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -560,7 +566,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task3" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -568,7 +574,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task4" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task4" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{PowerShell (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -576,7 +582,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task5" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task5" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{MinGW bash}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -584,7 +590,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task6" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task6" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{Git bash}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -592,7 +598,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task7" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task7" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{bash}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -600,7 +606,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task8" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task8" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{Putty}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -608,7 +614,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task9" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task9" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{cmd 64/32}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -617,7 +623,7 @@
 					<value name="Active" type="dword" data="00000001"/>
 					<value name="Count" type="dword" data="00000002"/>
 				</key>
-				<key name="Task10" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task10" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{Show ANSI colors}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -625,7 +631,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task11" modified="2014-10-31 15:59:02" build="141029">
+				<key name="Task11" modified="2014-12-18 16:05:13" build="141216">
 					<value name="Name" type="string" data="{Chocolatey (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -634,13 +640,23 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2014-10-31 15:59:02" build="141029">
+			<key name="Apps" modified="2014-12-18 16:05:13" build="141216">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2014-10-31 15:59:02" build="141029">
+			<key name="Colors" modified="2014-12-18 16:05:13" build="141216">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 			<value name="Multi.ShowSearch" type="hex" data="01"/>
+			<value name="ProcessCmdStart" type="hex" data="01"/>
+			<value name="CTS.ForceLocale" type="dword" data="00000000"/>
+			<value name="StatusBar.Hide.WVBack" type="hex" data="01"/>
+			<value name="StatusBar.Hide.WVDC" type="hex" data="01"/>
+			<value name="TabFlashChanged" type="dword" data="00000008"/>
+			<value name="TabModifiedSuffix" type="string" data="[*]"/>
+			<value name="Multi.SplitMaximize" type="dword" data="00005d0d"/>
+			<value name="Multi.Pause" type="dword" data="80808013"/>
+			<value name="Multi.GroupInput" type="dword" data="00005d47"/>
+			<value name="HighlightMouseSwitchX" type="dword" data="00005d58"/>
 		</key>
 	</key>
 </key>
