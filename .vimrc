@@ -14,7 +14,7 @@ set formatoptions+=mM
 set number
 set ruler
 set nolist
-set wrap
+set nowrap
 set laststatus=2
 set cmdheight=2
 set showcmd
