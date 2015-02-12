@@ -11,7 +11,7 @@ set wrapscan
 set showmatch
 set wildmenu
 set formatoptions+=mM
-set nonumber
+set number
 set ruler
 set nolist
 set wrap
