@@ -4,7 +4,7 @@ set nocompatible
 
 set ignorecase
 set smartcase
-set noexpandtab
+set expandtab
 set autoindent
 set backspace=indent,eol,start
 set wrapscan
