@@ -28,6 +28,8 @@ set formatexpr=autofmt#japanese#formatexpr()
 set history=50
 set incsearch
 
+vnoremap <silent> <C-p> "0p<CR>
+
 colorscheme base16-isotope
 
 if &t_Co > 2 || has("gui_running")
