@@ -75,3 +75,7 @@ $RECYCLE.BIN/
 *.msp
 
 .netrwhist
+
+# Vim bundles
+.vim/bundle/*
+!.vim/bundle/neobundle.vim
