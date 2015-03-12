@@ -40,6 +40,24 @@ ScrollLock & Down::send {Volume_Down}
 ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 
 ^SPACE::  Winset, Alwaysontop, , A
+^+v::send +{Insert}
+
+#If WinActive("ahk_exe putty.exe")
+    ^Tab::
+    send ^b
+    send o
+    return
+
+    ^F4::
+    send ^b
+    send, xy
+    return
+
+    ^T::
+    send ^b
+    send `%
+    return
+#if
 
 sc07b::Ctrl
 
