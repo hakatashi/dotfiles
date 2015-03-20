@@ -106,6 +106,7 @@ endif
 
 if has('mouse')
   set mouse=a
+  set ttymouse=xterm2
 endif
 
 nmap <C-Tab> :tabn<CR>
@@ -126,6 +127,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
