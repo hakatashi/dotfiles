@@ -79,3 +79,4 @@ $RECYCLE.BIN/
 # Vim bundles
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
+.sync

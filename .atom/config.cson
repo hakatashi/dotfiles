@@ -1,0 +1,48 @@
+"*":
+  "exception-reporting":
+    userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  editor:
+    fontFamily: "Ricty"
+    fontSize: 15
+    lineHeight: 1.2
+    tabLength: 4
+    softTabs: false
+    showInvisibles: true
+    preferredLineLength: 100
+    invisibles: {}
+    useHardwareAcceleration: false
+  core:
+    themes: [
+      "graphite-ui"
+      "base16-syntax"
+    ]
+    disabledPackages: [
+      "atom-jshint"
+      "atom-lint"
+      "linter"
+      "linter-jshint"
+      "grunt-runner"
+    ]
+    projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
+  "autocomplete-plus":
+    autoActivationDelay: 300
+    confirmCompletion: "enter"
+  linter:
+    showStatusBarWhenCursorIsInErrorRange: true
+  "atom-beautify":
+    js_indent_with_tabs: true
+    js_jslint_happy: true
+  "highlight-selected":
+    onlyHighlightWholeWords: true
+  "base16-syntax":
+    scheme: "Hopscotch"
+metrics:
+  userId: "868477fe1a2319cd224588088eb009eee59e4eeb"
+welcome:
+  showOnStartup: false
+"exception-reporting":
+  userId: "49a02b5b-1e67-221d-0078-379cc77b021e"
