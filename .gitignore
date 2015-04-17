@@ -76,6 +76,5 @@ $RECYCLE.BIN/
 
 .netrwhist
 
-# Vim bundles
-.vim/bundle/*
-!.vim/bundle/neobundle.vim
+.sync
+
