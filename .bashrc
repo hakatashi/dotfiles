@@ -116,4 +116,4 @@ export TEST_SERVER=1
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
 
-PS1='[\u@\h \W\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
+PS1='[\[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
