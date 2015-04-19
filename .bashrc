@@ -91,7 +91,7 @@ alias rm='rm -i'
 alias cp='cp -i -p'
 alias mv='mv -i'
 
-alias ll='ls -al'
+alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
 
