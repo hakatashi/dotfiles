@@ -51,6 +51,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'vim-scripts/AfterColors.vim'
+NeoBundle 'jiangmiao/auto-pairs'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
