@@ -49,12 +49,15 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'vim-scripts/AfterColors.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
 vnoremap <silent> <C-p> "0p<CR>
 
+let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
