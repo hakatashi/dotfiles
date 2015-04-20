@@ -54,6 +54,14 @@ NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'vim-scripts/nginx.vim'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'shawncplus/phpcomplete.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/vim-easymotion'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
