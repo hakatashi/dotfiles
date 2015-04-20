@@ -30,6 +30,29 @@ set incsearch
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«
 
+" NeoBundle Settings
+if !1 | finish | endif
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+" My Bundles here:
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+
 vnoremap <silent> <C-p> "0p<CR>
 
 set t_Co=256
@@ -116,28 +139,5 @@ nmap <C-S-Tab> :tabp<CR>
 nmap <C-t> :tabnew<CR>
 
 source $VIMRUNTIME/mswin.vim
-
-" NeoBundle Settings
-if !1 | finish | endif
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-" My Bundles here:
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-call neobundle#end()
-filetype plugin indent on
-NeoBundleCheck
 
 let g:neocomplcache_enable_at_startup = 1
