@@ -27,6 +27,8 @@ set langmenu=ja_jp.utf-8
 set formatexpr=autofmt#japanese#formatexpr()
 set history=50
 set incsearch
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«
 
 vnoremap <silent> <C-p> "0p<CR>
 
