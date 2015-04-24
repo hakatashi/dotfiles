@@ -6,3 +6,5 @@
 	email = hakatasiloving@gmail.com
 [color]
 	ui = always
+[push]
+	default = matching
