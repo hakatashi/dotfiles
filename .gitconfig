@@ -1,5 +1,10 @@
 [core]
 	sparsecheckout = true
+	pager =
 [user]
 	name = Koki Takahashi
 	email = hakatasiloving@gmail.com
+[color]
+	ui = always
+[push]
+	default = matching
