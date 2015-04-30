@@ -64,6 +64,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'moll/vim-node'
 NeoBundle 'guileen/vim-node-dict'
+NeoBundle 'vim-scripts/po.vim--Jelenak'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
