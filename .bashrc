@@ -122,3 +122,8 @@ PS1='[\[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 [[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+
+# alias hub to git if exists
+if hash hub 2> /dev/null; then
+    eval "$(hub alias -s)"
+fi
