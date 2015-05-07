@@ -105,6 +105,8 @@ alias push='git push origin HEAD'
 alias phpunit='\phpunit --colors'
 alias less='\less -R'
 
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
