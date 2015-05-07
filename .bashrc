@@ -106,6 +106,7 @@ alias phpunit='\phpunit --colors'
 alias less='\less -R'
 
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+alias f='fuck'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
