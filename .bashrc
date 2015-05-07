@@ -114,6 +114,12 @@ fi
 
 export TEST_SERVER=1
 
+if hash links 2> /dev/null; then
+    export BROWSER=links
+elif hash lynx 2> /dev/null; then
+    export BROWSER=lynx
+fi
+
 source ~/.bash/.git-completion.bash
 source ~/.bash/.git-prompt.sh
 
