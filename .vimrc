@@ -152,9 +152,17 @@ if has('mouse')
   set ttymouse=xterm2
 endif
 
+" Tab mover things
 nmap <C-Tab> :tabn<CR>
 nmap <C-S-Tab> :tabp<CR>
 nmap <C-t> :tabnew<CR>
+
+" Indent things
+nmap <Tab> >>
+nmap <S-Tab> <<
+vmap <Tab> >>
+vmap <S-Tab> <<
+imap <S-Tab> <Esc><<i
 
 source $VIMRUNTIME/mswin.vim
 
