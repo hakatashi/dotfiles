@@ -146,3 +146,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
 if hash hub 2> /dev/null; then
     eval "$(hub alias -s)"
 fi
+
+# Disable XON feature, which take C-s from vim
+# Thanks: http://unix.stackexchange.com/a/72092
+stty -ixon
+
