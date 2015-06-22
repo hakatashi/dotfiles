@@ -28,7 +28,7 @@ set formatexpr=autofmt#japanese#formatexpr()
 set history=50
 set incsearch
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«
+set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
 
 " NeoBundle Settings
 if !1 | finish | endif
