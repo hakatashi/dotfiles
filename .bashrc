@@ -87,7 +87,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias rm='rm -i'
 alias cp='cp -i -p'
 alias mv='mv -i'
 
