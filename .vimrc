@@ -67,6 +67,8 @@ NeoBundle 'guileen/vim-node-dict'
 NeoBundle 'vim-scripts/po.vim--Jelenak'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'markcornick/vim-vagrant'
+NeoBundle 'vim-scripts/smarty-syntax'
+NeoBundle 'tpope/vim-sleuth'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 call neobundle#end()
 filetype plugin indent on

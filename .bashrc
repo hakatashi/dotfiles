@@ -87,7 +87,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias rm='rm -i'
 alias cp='cp -i -p'
 alias mv='mv -i'
 
@@ -151,3 +150,5 @@ fi
 # Thanks: http://unix.stackexchange.com/a/72092
 stty -ixon
 
+# Shelly integration
+SHELLY_HOME=/home/hakatashi/.shelly; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
