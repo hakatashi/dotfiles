@@ -155,3 +155,6 @@ stty -ixon
 if command -v tmux > /dev/null; then
     [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
+
+# Shelly integration
+SHELLY_HOME=/home/hakatashi/.shelly; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
