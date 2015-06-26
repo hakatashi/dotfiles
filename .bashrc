@@ -124,6 +124,7 @@ fi
 
 source ~/.bash/.git-completion.bash
 source ~/.bash/.git-prompt.sh
+source ~/.bash/git-extras
 
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
@@ -150,3 +151,7 @@ fi
 # Thanks: http://unix.stackexchange.com/a/72092
 stty -ixon
 
+# Automatically launch tmux if exists
+if command -v tmux > /dev/null; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
