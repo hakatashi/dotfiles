@@ -171,3 +171,7 @@ source $VIMRUNTIME/mswin.vim
 
 let g:neocomplcache_enable_at_startup = 1
 let g:airline_powerline_fonts = 1
+
+" Unbind Shift-k and Shift-j, which are very often to misstype
+nnoremap J <Nop>
+nnoremap K <Nop>
