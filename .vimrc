@@ -69,6 +69,7 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'markcornick/vim-vagrant'
 NeoBundle 'vim-scripts/smarty-syntax'
 NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'vim-scripts/gnuplot.vim'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 call neobundle#end()
 filetype plugin indent on
