@@ -13,6 +13,7 @@ ScrollLock & i::send {PgUp}
 ScrollLock & o::send {End}
 ScrollLock & `;::send {vkF4sc029}
 
+ScrollLock & m::send +{F10}
 ScrollLock & ,::send {(}
 ScrollLock & .::send {)}
 
