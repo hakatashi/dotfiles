@@ -124,6 +124,7 @@ fi
 
 source ~/.bash/.git-completion.bash
 source ~/.bash/.git-prompt.sh
+source ~/.bash/git-extras
 
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
