@@ -167,6 +167,9 @@ vmap <Tab> >>
 vmap <S-Tab> <<
 imap <S-Tab> <Esc><<i
 
+" Auto-indented paste
+nmap p ]p
+
 source $VIMRUNTIME/mswin.vim
 
 let g:neocomplcache_enable_at_startup = 1
