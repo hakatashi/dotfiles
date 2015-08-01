@@ -27,9 +27,58 @@ set langmenu=ja_jp.utf-8
 set formatexpr=autofmt#japanese#formatexpr()
 set history=50
 set incsearch
+set list
+set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
+set shell=/bin/bash
+
+" NeoBundle Settings
+if !1 | finish | endif
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+" My Bundles here:
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'vim-scripts/AfterColors.vim'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'vim-scripts/nginx.vim'
+NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'shawncplus/phpcomplete.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'moll/vim-node'
+NeoBundle 'guileen/vim-node-dict'
+NeoBundle 'vim-scripts/po.vim--Jelenak'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'markcornick/vim-vagrant'
+NeoBundle 'vim-scripts/smarty-syntax'
+NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'vim-scripts/gnuplot.vim'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
 
 vnoremap <silent> <C-p> "0p<CR>
 
+let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
@@ -109,31 +158,26 @@ if has('mouse')
   set ttymouse=xterm2
 endif
 
+" Tab mover things
 nmap <C-Tab> :tabn<CR>
 nmap <C-S-Tab> :tabp<CR>
 nmap <C-t> :tabnew<CR>
 
+" Indent things
+nmap <Tab> >>
+nmap <S-Tab> <<
+vmap <Tab> >>
+vmap <S-Tab> <<
+imap <S-Tab> <Esc><<i
+
+" Auto-indented paste
+nmap p ]p
+
 source $VIMRUNTIME/mswin.vim
 
-" NeoBundle Settings
-if !1 | finish | endif
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-" My Bundles here:
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
-call neobundle#end()
-filetype plugin indent on
-NeoBundleCheck
-
 let g:neocomplcache_enable_at_startup = 1
+let g:airline_powerline_fonts = 1
+
+" Unbind Shift-k and Shift-j, which are very often to misstype
+nnoremap J <Nop>
+nnoremap K <Nop>

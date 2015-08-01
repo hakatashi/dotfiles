@@ -40,12 +40,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -87,11 +87,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias rm='rm -i'
 alias cp='cp -i -p'
 alias mv='mv -i'
 
-alias ll='ls -al'
+alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -102,7 +101,11 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 alias push='git push origin HEAD'
-alias unit='phpunit --colors'
+alias phpunit='\phpunit --colors'
+alias less='\less -R'
+
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+alias f='fuck'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -113,7 +116,39 @@ fi
 
 export TEST_SERVER=1
 
-source ~/.git-completion.bash
-source ~/.git-prompt.sh
+if hash links 2> /dev/null; then
+    export BROWSER=links
+elif hash lynx 2> /dev/null; then
+    export BROWSER=lynx
+fi
 
-PS1='[\u@\h \W\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
+source ~/.bash/.git-completion.bash
+source ~/.bash/.git-prompt.sh
+
+# Enable `npm -g` without sudo
+# Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+NPM_PACKAGES="${HOME}/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+PS1='[\[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
+[[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+
+# alias hub to git if exists
+if hash hub 2> /dev/null; then
+    eval "$(hub alias -s)"
+fi
+
+# Disable XON feature, which take C-s from vim
+# Thanks: http://unix.stackexchange.com/a/72092
+stty -ixon
+
+# Shelly integration
+SHELLY_HOME=/home/hakatashi/.shelly; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
