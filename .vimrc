@@ -30,6 +30,7 @@ set incsearch
 set list
 set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
 set shell=/bin/bash
+set breakindent
 
 " NeoBundle Settings
 if !1 | finish | endif
