@@ -174,6 +174,16 @@ imap <S-Tab> <Esc><<i
 " Auto-indented paste
 nmap p ]p
 
+" Move through wrapped lines
+" http://vim.wikia.com/wiki/Move_through_wrapped_lines
+" imap <silent> <Down> <C-o>gj
+" imap <silent> <Up> <C-o>gk
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+" Additional
+nmap <silent> j gj
+nmap <silent> k gk
+
 source $VIMRUNTIME/mswin.vim
 
 let g:neocomplcache_enable_at_startup = 1
