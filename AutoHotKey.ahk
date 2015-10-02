@@ -39,6 +39,9 @@ Pause::Media_Play_Pause
     Right::Media_Next
     Up::Volume_Up
     Down::Volume_Down
+
+    sc079::^#Left
+    sc070::^#Right
 #If
 
 ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
