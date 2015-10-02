@@ -122,6 +122,8 @@ elif hash lynx 2> /dev/null; then
     export BROWSER=lynx
 fi
 
+export EDITOR=vim
+
 source ~/.bash/.git-completion.bash
 source ~/.bash/.git-prompt.sh
 
