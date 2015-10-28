@@ -6,5 +6,7 @@
 	email = hakatasiloving@gmail.com
 [color]
 	ui = always
+[alias]
+	dif = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 [push]
 	default = simple
