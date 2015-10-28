@@ -15,7 +15,7 @@ Pause::Media_Play_Pause
     o::End
     `;::vkF4sc029
 
-    m::+F10
+    m::Send +{F10}
     ,::(
     .::)
 
