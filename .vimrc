@@ -2,35 +2,35 @@ scriptencoding utf-8
 
 set nocompatible
 
-set ignorecase
-set smartcase
-set expandtab
-set autoindent
-set backspace=indent,eol,start
-set wrapscan
-set showmatch
-set wildmenu
-set formatoptions+=mM
-set number
-set ruler
-set nolist
-set nowrap
-set laststatus=2
-set cmdheight=2
-set showcmd
-set title
-set background=dark
-set tabstop=4
-set shiftwidth=4
-set encoding=utf-8
-set langmenu=ja_jp.utf-8
-set formatexpr=autofmt#japanese#formatexpr()
-set history=50
-set incsearch
 set list
-set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
-set shell=/bin/bash
+set ruler
+set title
+set nowrap
+set nolist
+set number
+set showcmd
+set wildmenu
+set wrapscan
+set expandtab
+set showmatch
+set incsearch
+set smartcase
+set tabstop=4
+set autoindent
+set ignorecase
+set history=50
 set breakindent
+set cmdheight=2
+set shiftwidth=4
+set laststatus=2
+set encoding=utf-8
+set shell=/bin/bash
+set background=dark
+set formatoptions+=mM
+set langmenu=ja_jp.utf-8
+set backspace=indent,eol,start
+set formatexpr=autofmt#japanese#formatexpr()
+set listchars=tab:» ,trail:-,eol:↲,extends:»,precedes:«
 
 " NeoBundle Settings
 if !1 | finish | endif
@@ -43,37 +43,37 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'vim-scripts/AfterColors.vim'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'vim-scripts/nginx.vim'
-NeoBundle 'powerman/vim-plugin-AnsiEsc'
-NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'shawncplus/phpcomplete.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'moll/vim-node'
-NeoBundle 'guileen/vim-node-dict'
-NeoBundle 'vim-scripts/po.vim--Jelenak'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'markcornick/vim-vagrant'
-NeoBundle 'vim-scripts/smarty-syntax'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'othree/html5.vim'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'wavded/vim-stylus'
-NeoBundle 'vim-scripts/gnuplot.vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'guileen/vim-node-dict'
+NeoBundle 'vim-scripts/nginx.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'vim-scripts/gnuplot.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'markcornick/vim-vagrant'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'vim-scripts/smarty-syntax'
+NeoBundle 'shawncplus/phpcomplete.vim'
+NeoBundle 'vim-scripts/po.vim--Jelenak'
+NeoBundle 'vim-scripts/AfterColors.vim'
+NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
 call neobundle#end()
 filetype plugin indent on
