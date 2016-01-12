@@ -10,6 +10,9 @@
 	dif = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 [push]
 	default = simple
+[alias]
+	wdiff = diff --word-diff 
+	cdiff = diff --cached
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f

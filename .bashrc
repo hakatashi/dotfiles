@@ -107,6 +107,9 @@ alias less='\less -R'
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias f='fuck'
 
+alias be='bundle exec'
+alias bers='bundle exec rails server'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -153,4 +156,8 @@ fi
 stty -ixon
 
 # Shelly integration
-SHELLY_HOME=/home/hakatashi/.shelly; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
+SHELLY_HOME="$HOME/.shelly"; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
+
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
