@@ -1,3 +1,4 @@
+set encoding=utf-8
 scriptencoding utf-8
 
 set nocompatible
@@ -6,7 +7,6 @@ set list
 set ruler
 set title
 set nowrap
-set nolist
 set number
 set showcmd
 set wildmenu
@@ -23,13 +23,12 @@ set breakindent
 set cmdheight=2
 set shiftwidth=4
 set laststatus=2
-set encoding=utf-8
 set background=dark
 set formatoptions+=mM
 set langmenu=ja_jp.utf-8
 set backspace=indent,eol,start
 set formatexpr=autofmt#japanese#formatexpr()
-set listchars=tab:» ,trail:-,eol:↲,extends:»,precedes:«
+set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
 
 " Explicitly specify shell name according to the platform
 " https://github.com/mattn/gist-vim/issues/48#issuecomment-12916349
