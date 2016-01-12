@@ -155,13 +155,21 @@ if has('unix') && !has('gui_running')
   unlet s:uname
 endif
 
-" Special 256-color setting for ConEmu
+" Special setting for ConEmu
 " http://conemu.github.io/en/VimXterm.html
 if has('win32') && !has("gui_running")
+  " 256-color
   set term=xterm
   set t_Co=256
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
+
+  " Enable mouse interaction
+  set mouse=a
+  inoremap <Esc>[62~ <C-X><C-E>
+  inoremap <Esc>[63~ <C-X><C-Y>
+  nnoremap <Esc>[62~ <C-E>
+  nnoremap <Esc>[63~ <C-Y>
 endif
 
 if !has('gui_running') && has('xterm_clipboard')
