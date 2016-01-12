@@ -8,3 +8,6 @@
 	ui = always
 [push]
 	default = simple
+[alias]
+	wdiff = diff --word-diff 
+	cdiff = diff --cached
