@@ -155,6 +155,15 @@ if has('unix') && !has('gui_running')
   unlet s:uname
 endif
 
+" Special 256-color setting for ConEmu
+" http://conemu.github.io/en/VimXterm.html
+if has('win32') && !has("gui_running")
+  set term=xterm
+  set t_Co=256
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
+endif
+
 if !has('gui_running') && has('xterm_clipboard')
   set clipboard=exclude:cons\\\|linux\\\|cygwin\\\|rxvt\\\|screen
 endif
