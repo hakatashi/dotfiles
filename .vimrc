@@ -163,6 +163,7 @@ if has('win32') && !has("gui_running")
   set t_Co=256
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
+  colorscheme slate
 
   " Enable mouse interaction
   set mouse=a
@@ -202,8 +203,8 @@ nmap p ]p
 
 " Move through wrapped lines
 " http://vim.wikia.com/wiki/Move_through_wrapped_lines
-" imap <silent> <Down> <C-o>gj
-" imap <silent> <Up> <C-o>gk
+imap <silent> <Down> <C-o>gj
+imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 " Additional
