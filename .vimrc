@@ -24,13 +24,21 @@ set cmdheight=2
 set shiftwidth=4
 set laststatus=2
 set encoding=utf-8
-set shell=/bin/bash
 set background=dark
 set formatoptions+=mM
 set langmenu=ja_jp.utf-8
 set backspace=indent,eol,start
 set formatexpr=autofmt#japanese#formatexpr()
 set listchars=tab:» ,trail:-,eol:↲,extends:»,precedes:«
+
+" Explicitly specify shell name according to the platform
+" https://github.com/mattn/gist-vim/issues/48#issuecomment-12916349
+if has('win32')
+  set shell=cmd
+  set shellcmdflag=/c
+else
+  set shell=/bin/bash
+endif
 
 " NeoBundle Settings
 if !1 | finish | endif
