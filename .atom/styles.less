@@ -1,3 +1,19 @@
-.editor {
-    font-weight: bold;
+.custom-decorations {
+    background: #181A1D;
+}
+body {
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+}
+atom-text-editor {
+    text-rendering: optimizeLegibility;
+    //font-weight: bold;
+}
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".html"]:before, .icon-file-text[data-name$=".html"]:before {
+    color: #4175AC;
+}
+.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".html.erb"]:before, .icon-file-text[data-name$=".html.erb"]:before {
+    color: #3639AF;
 }
