@@ -5,3 +5,4 @@
 !config.cson
 !keymap.cson
 !styles.less
+!init.coffee
