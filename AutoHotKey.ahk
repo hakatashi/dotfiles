@@ -49,6 +49,9 @@ ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int",
 ^SPACE::  Winset, Alwaysontop, , A
 ^+v::send +{Insert}
 
+; Transparently maps Backslash key of JIS Keyboard into TRUE Backslash
+sc073::\
+
 #If WinActive("ahk_exe putty.exe") or WinActive("ahk_exe kitty.exe")
     ^Tab::
     send ^b
