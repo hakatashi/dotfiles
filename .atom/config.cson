@@ -57,6 +57,8 @@
       no_lead_zero: true
     css_preserve_newlines: true
     css_newline_between_rules: true
+    language_erb_default_beautifier: "HTML Beautifier"
+    language_css_default_beautifier: "Pretty Diff"
   "highlight-selected":
     onlyHighlightWholeWords: true
   "base16-syntax":
