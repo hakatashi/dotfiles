@@ -6,13 +6,13 @@
 	email = hakatasiloving@gmail.com
 [color]
 	ui = always
-[alias]
-	dif = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 [push]
 	default = simple
+	followTags = true
 [alias]
-	wdiff = diff --word-diff 
-	cdiff = diff --cached
+	diff = diff --color-words --word-diff-regex='\\w+|[^[:space:]]' --ignore-space-change
+	wdiff = diff --word-diff --ignore-space-change
+	cdiff = diff --cached --ignore-space-change
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
