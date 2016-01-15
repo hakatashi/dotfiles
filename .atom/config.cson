@@ -1,25 +1,31 @@
 "*":
-  "exception-reporting":
-    userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
-  editor:
-    fontFamily: "Ricty"
-    lineHeight: 1.2
-    tabLength: 4
-    softTabs: false
-    showInvisibles: true
-    preferredLineLength: 100
-    invisibles: {}
-    useHardwareAcceleration: true
-    fontSize: 15
+  "atom-beautify":
+    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    css:
+      convert_quotes: "single"
+      indent_char: "\t"
+      indent_size: 4
+      newline_between_rules: true
+      no_lead_zero: true
+    css_newline_between_rules: true
+    css_preserve_newlines: true
+    js_indent_with_tabs: true
+    js_jslint_happy: true
+    language_css_default_beautifier: "Pretty Diff"
+    language_erb_default_beautifier: "HTML Beautifier"
+  "autocomplete-plus":
+    autoActivationDelay: 300
+    confirmCompletion: "enter"
+  "base16-syntax":
+    scheme: "Atelier Cave"
   core:
-    themes: [
-      "atom-material-ui"
-      "base16-syntax"
-    ]
+    customFileTypes:
+      source: [
+        "[object Object]"
+      ]
+      "source.xml": [
+        "ttx"
+      ]
     disabledPackages: [
       "atom-jshint"
       "atom-lint"
@@ -32,103 +38,85 @@
       "language-livescript"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
-    customFileTypes:
-      "source.xml": [
-        "ttx"
-      ]
-      source: [
-        "[object Object]"
-      ]
-  "autocomplete-plus":
-    autoActivationDelay: 300
-    confirmCompletion: "enter"
-  linter:
-    statusBar: "Show error if the cursor is in range"
-    showErrorPanel: false
-  "atom-beautify":
-    js_indent_with_tabs: true
-    js_jslint_happy: true
-    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
-    css:
-      indent_char: "\t"
-      indent_size: 4
-      convert_quotes: "single"
-      newline_between_rules: true
-      no_lead_zero: true
-    css_preserve_newlines: true
-    css_newline_between_rules: true
-    language_erb_default_beautifier: "HTML Beautifier"
-    language_css_default_beautifier: "Pretty Diff"
-  "highlight-selected":
-    onlyHighlightWholeWords: true
-  "base16-syntax":
-    scheme: "Atelier Cave"
-  "remote-sync": {}
+    themes: [
+      "atom-material-ui"
+      "base16-syntax"
+    ]
   docblockr: {}
-  "tree-view":
-    squashDirectoryNames: true
-  "vim-surround": {}
-  "git-plus": {}
-  "linter-jshint": {}
-  "japanese-wrap":
-    characterWidth: {}
-    lineBreakingRule:
-      ideographicSpaceAsWihteSpace: true
-  "ide-haskell": {}
-  "haskell-ghc-mod": {}
+  editor:
+    fontFamily: "Ricty"
+    fontSize: 15
+    invisibles: {}
+    lineHeight: 1.2
+    preferredLineLength: 100
+    showInvisibles: true
+    softTabs: false
+    tabLength: 4
+    useHardwareAcceleration: true
   "editor-background":
     box3d: {}
     image: {}
     other: {}
     text: {}
     video: {}
+  "exception-reporting":
+    userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
+  "git-plus": {}
+  "haskell-ghc-mod": {}
+  "highlight-selected":
+    onlyHighlightWholeWords: true
+  "ide-haskell": {}
+  "japanese-wrap":
+    characterWidth: {}
+    lineBreakingRule:
+      ideographicSpaceAsWihteSpace: true
   "language-review": {}
-".html.js.text":
-  editor:
-    preferredLineLength: 100
-".text.xml.xsl":
-  editor:
-    preferredLineLength: 100
-".basic.html.text":
-  editor:
-    preferredLineLength: 100
-".js.regexp.source":
-  editor:
-    preferredLineLength: 100
-".html.php.text":
-  editor:
-    preferredLineLength: 100
+  linter:
+    showErrorPanel: false
+    statusBar: "Show error if the cursor is in range"
+  "linter-jshint": {}
+  metrics:
+    userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  "remote-sync": {}
+  "tree-view":
+    squashDirectoryNames: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
 ".asm.source.x86":
   editor:
     preferredLineLength: 100
-".html.smarty.text":
-  editor:
-    preferredLineLength: 100
-".pyjade.source":
-  editor:
-    preferredLineLength: 100
-".jade.source":
-  editor:
-    preferredLineLength: 100
-    tabLength: 2
-    showIndentGuide: false
-    nonWordCharacters: "、。"
-".source.yaml":
-  editor:
-    preferredLineLength: 100
-".ini.source":
-  editor:
-    preferredLineLength: 100
-".diff.source":
-  editor:
-    preferredLineLength: 100
-".text.xml":
+".basic.html.text":
   editor:
     preferredLineLength: 100
 ".coffee.source":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".diff.source":
+  editor:
+    preferredLineLength: 100
+".html.js.text":
+  editor:
+    preferredLineLength: 100
+".html.php.text":
+  editor:
+    preferredLineLength: 100
+".html.smarty.text":
+  editor:
+    preferredLineLength: 100
+".ini.source":
+  editor:
+    preferredLineLength: 100
+".jade.source":
+  editor:
+    nonWordCharacters: "、。"
+    preferredLineLength: 100
+    showIndentGuide: false
+    tabLength: 2
+".js.regexp.source":
+  editor:
+    preferredLineLength: 100
 ".js.source":
   editor:
     preferredLineLength: 100
@@ -138,12 +126,24 @@
 ".livescript.source":
   editor:
     preferredLineLength: 100
+".pyjade.source":
+  editor:
+    preferredLineLength: 100
 ".review.source":
   editor:
     preferredLineLength: 100
+".source.yaml":
+  editor:
+    preferredLineLength: 100
+".text.xml":
+  editor:
+    preferredLineLength: 100
+".text.xml.xsl":
+  editor:
+    preferredLineLength: 100
+"exception-reporting":
+  userId: "49a02b5b-1e67-221d-0078-379cc77b021e"
 metrics:
   userId: "868477fe1a2319cd224588088eb009eee59e4eeb"
 welcome:
   showOnStartup: false
-"exception-reporting":
-  userId: "49a02b5b-1e67-221d-0078-379cc77b021e"
