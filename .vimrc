@@ -1,3 +1,4 @@
+set encoding=utf-8
 scriptencoding utf-8
 
 set nocompatible
@@ -6,7 +7,6 @@ set list
 set ruler
 set title
 set nowrap
-set nolist
 set number
 set showcmd
 set wildmenu
@@ -23,14 +23,21 @@ set breakindent
 set cmdheight=2
 set shiftwidth=4
 set laststatus=2
-set encoding=utf-8
-set shell=/bin/bash
 set background=dark
 set formatoptions+=mM
 set langmenu=ja_jp.utf-8
 set backspace=indent,eol,start
 set formatexpr=autofmt#japanese#formatexpr()
-set listchars=tab:» ,trail:-,eol:↲,extends:»,precedes:«
+set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
+
+" Explicitly specify shell name according to the platform
+" https://github.com/mattn/gist-vim/issues/48#issuecomment-12916349
+if has('win32')
+  set shell=cmd
+  set shellcmdflag=/c
+else
+  set shell=/bin/bash
+endif
 
 " NeoBundle Settings
 if !1 | finish | endif
@@ -81,7 +88,7 @@ NeoBundleCheck
 
 vnoremap <silent> <C-p> "0p<CR>
 
-let base16colorspace=256  " Access colors present in 256 colorspace"
+let base16colorspace=256  " Access colors present in 256 colorspace
 set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
@@ -148,6 +155,24 @@ if has('unix') && !has('gui_running')
   unlet s:uname
 endif
 
+" Special setting for ConEmu
+" http://conemu.github.io/en/VimXterm.html
+if has('win32') && !has("gui_running")
+  " 256-color
+  set term=xterm
+  set t_Co=256
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
+  colorscheme slate
+
+  " Enable mouse interaction
+  set mouse=a
+  inoremap <Esc>[62~ <C-X><C-E>
+  inoremap <Esc>[63~ <C-X><C-Y>
+  nnoremap <Esc>[62~ <C-E>
+  nnoremap <Esc>[63~ <C-Y>
+endif
+
 if !has('gui_running') && has('xterm_clipboard')
   set clipboard=exclude:cons\\\|linux\\\|cygwin\\\|rxvt\\\|screen
 endif
@@ -178,8 +203,8 @@ nmap p ]p
 
 " Move through wrapped lines
 " http://vim.wikia.com/wiki/Move_through_wrapped_lines
-" imap <silent> <Down> <C-o>gj
-" imap <silent> <Up> <C-o>gk
+imap <silent> <Down> <C-o>gj
+imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 " Additional

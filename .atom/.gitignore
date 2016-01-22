@@ -1,7 +1,8 @@
-packages
-storage
-compile-cache
-dev
-.npm
-.apm
-.node-gyp
+# Ignore everything
+*
+
+# But the followings
+!config.cson
+!keymap.cson
+!styles.less
+!init.coffee

@@ -7,3 +7,19 @@
   'enter': 'autocomplete-plus:confirm'
 '.editor:not(.mini)':
   'shift-tab': 'snippets:expand'
+'atom-text-editor.vim-mode':
+  'ctrl-f': 'unset!'
+  'ctrl-c': 'unset!'
+  'ctrl-x': 'unset!'
+  'ctrl-b': 'unset!'
+  'ctrl-t': 'unset!'
+  'ctrl-r': 'unset!'
+  'ctrl-,': 'unset!'
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'ctrl-f': 'unset!'
+  'ctrl-c': 'unset!'
+  'ctrl-x': 'unset!'
+  'ctrl-b': 'unset!'
+  'ctrl-t': 'unset!'
+  'ctrl-r': 'unset!'
+  'ctrl-,': 'unset!'
