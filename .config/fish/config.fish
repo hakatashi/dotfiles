@@ -60,3 +60,7 @@ balias f 'fuck'
 
 # binds
 
+# hub config
+command --search hub > /dev/null; and begin
+    eval (hub alias -s)
+end
