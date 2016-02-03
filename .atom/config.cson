@@ -17,7 +17,8 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
-    scheme: "Atelier Cave"
+    scheme: "Isotope"
+  "browser-plus": {}
   core:
     customFileTypes:
       source: [
@@ -36,6 +37,9 @@
       "haskell-ghc-mod"
       "editor-background"
       "language-livescript"
+      "linter-htmlhint"
+      "nuclide-ocaml"
+      "nuclide"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     themes: [
@@ -45,7 +49,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -61,6 +65,8 @@
     video: {}
   "exception-reporting":
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "git-plus": {}
   "haskell-ghc-mod": {}
   "highlight-selected":
@@ -77,9 +83,13 @@
   "linter-jshint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "remote-sync": {}
   "tree-view":
     squashDirectoryNames: true
+  "vim-mode": {}
   "vim-surround": {}
   welcome:
     showOnStartup: false
