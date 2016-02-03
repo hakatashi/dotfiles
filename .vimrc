@@ -32,6 +32,7 @@ set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
 
 " Explicitly specify shell name according to the platform
 " https://github.com/mattn/gist-vim/issues/48#issuecomment-12916349
+" http://milkandtang.com/blog/2013/03/22/vim-fish-shell-and-sensible/
 if has('win32')
   set shell=cmd
   set shellcmdflag=/c
