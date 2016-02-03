@@ -51,6 +51,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
+NeoBundle 'gkz/vim-ls'
 NeoBundle 'moll/vim-node'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'othree/html5.vim'
