@@ -88,12 +88,15 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
-vnoremap <silent> <C-p> "0p<CR>
-
-let base16colorspace=256  " Access colors present in 256 colorspace
+" Settings about 256 colors
+" http://vim.wikia.com/wiki/256_colors_in_vim
 set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
+
+" Use 256-colored colorscheme
+" https://github.com/chriskempson/base16-vim#256-colorspace
+let base16colorspace=256
 colorscheme base16-isotope
 
 if &t_Co > 2 || has("gui_running")
@@ -187,6 +190,10 @@ if has('mouse')
   set mouse=a
   set ttymouse=xterm2
 endif
+
+" Use C-p to paste strings constantly.
+" http://qiita.com/fukajun/items/bd97a9b963dae40b63f5
+vnoremap <silent> <C-p> "0p<CR>
 
 " Tab mover things
 nmap <C-Tab> :tabn<CR>
