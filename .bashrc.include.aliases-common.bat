@@ -30,3 +30,5 @@ doskey less=less -R
 doskey be=bundle exec
 doskey bers=bundle exec rails server
 
+doskey weather=curl wttr.in
+
