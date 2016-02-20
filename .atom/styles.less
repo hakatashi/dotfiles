@@ -17,3 +17,15 @@ atom-text-editor {
 .file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".html.erb"]:before, .icon-file-text[data-name$=".html.erb"]:before {
     color: #3639AF;
 }
+.editor-background-line {
+    transform: translate3d(0, 0, 0) scale(1, 1.4) !important;
+
+    position: relative;
+    left: -6px;
+
+    border-right: 12px solid black;
+
+    &:empty {
+        visibility: hidden;
+    }
+}
