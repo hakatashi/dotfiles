@@ -17,7 +17,8 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
-    scheme: "Atelier Cave"
+    scheme: "Isotope"
+  "browser-plus": {}
   core:
     customFileTypes:
       source: [
@@ -34,8 +35,12 @@
       "sort-lines"
       "ide-haskell"
       "haskell-ghc-mod"
-      "editor-background"
       "language-livescript"
+      "linter-htmlhint"
+      "nuclide-ocaml"
+      "nuclide"
+      "editor-stats"
+      "editor-background"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     themes: [
@@ -45,8 +50,10 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 15
-    invisibles: {}
+    fontSize: 16
+    invisibles:
+      space: " "
+      tab: " "
     lineHeight: 1.2
     preferredLineLength: 100
     showInvisibles: true
@@ -55,12 +62,21 @@
     useHardwareAcceleration: true
   "editor-background":
     box3d: {}
-    image: {}
+    image:
+      backgroundSize: "cover"
+      overlayColor:
+        alpha: 1
+        blue: 0
+        green: 0
+        red: 0
+      url: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images/2016年1月25日/54872584_p0-2x.jpg"
     other: {}
     text: {}
     video: {}
   "exception-reporting":
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
   "git-plus": {}
   "haskell-ghc-mod": {}
   "highlight-selected":
@@ -77,9 +93,13 @@
   "linter-jshint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  nuclide:
+    "nuclide-home":
+      showHome: false
   "remote-sync": {}
   "tree-view":
     squashDirectoryNames: true
+  "vim-mode": {}
   "vim-surround": {}
   welcome:
     showOnStartup: false

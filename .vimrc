@@ -32,6 +32,7 @@ set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«
 
 " Explicitly specify shell name according to the platform
 " https://github.com/mattn/gist-vim/issues/48#issuecomment-12916349
+" http://milkandtang.com/blog/2013/03/22/vim-fish-shell-and-sensible/
 if has('win32')
   set shell=cmd
   set shellcmdflag=/c
@@ -50,6 +51,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
+NeoBundle 'gkz/vim-ls'
 NeoBundle 'moll/vim-node'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'othree/html5.vim'
@@ -86,12 +88,15 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
-vnoremap <silent> <C-p> "0p<CR>
-
-let base16colorspace=256  " Access colors present in 256 colorspace
+" Settings about 256 colors
+" http://vim.wikia.com/wiki/256_colors_in_vim
 set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
+
+" Use 256-colored colorscheme
+" https://github.com/chriskempson/base16-vim#256-colorspace
+let base16colorspace=256
 colorscheme base16-isotope
 
 if &t_Co > 2 || has("gui_running")
@@ -186,6 +191,10 @@ if has('mouse')
   set ttymouse=xterm2
 endif
 
+" Use C-p to paste strings constantly.
+" http://qiita.com/fukajun/items/bd97a9b963dae40b63f5
+vnoremap <silent> <C-p> "0p<CR>
+
 " Tab mover things
 nmap <C-Tab> :tabn<CR>
 nmap <C-S-Tab> :tabp<CR>
@@ -203,7 +212,7 @@ nmap p ]p
 
 " Move through wrapped lines
 " http://vim.wikia.com/wiki/Move_through_wrapped_lines
-imap <silent> <Down> <C-o>gj
+"imap <silent> <Down> <C-o>gj
 imap <silent> <Up> <C-o>gk
 nmap <silent> <Down> gj
 nmap <silent> <Up> gk

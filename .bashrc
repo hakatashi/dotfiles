@@ -111,6 +111,8 @@ alias be='bundle exec'
 alias bers='bundle exec rails server'
 alias befs='bundle exec foreman start'
 
+alias weather='curl wttr.in'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
