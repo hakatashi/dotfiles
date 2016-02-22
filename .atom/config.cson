@@ -51,9 +51,7 @@
   editor:
     fontFamily: "Ricty"
     fontSize: 16
-    invisibles:
-      space: " "
-      tab: " "
+    invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
     showInvisibles: true
