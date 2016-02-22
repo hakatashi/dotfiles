@@ -14,6 +14,7 @@
 	d = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x2F\\x3A-\\x40\\x5B-\\x5E\\x60\\x7B-\\x7F]+|[^[:space:]]+' --ignore-space-change
 	wdiff = diff --word-diff --ignore-space-change
 	cdiff = diff --cached --ignore-space-change
+	stauts = status
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
