@@ -109,6 +109,7 @@ alias f='fuck'
 
 alias be='bundle exec'
 alias bers='bundle exec rails server'
+alias befs='bundle exec foreman start'
 
 alias weather='curl wttr.in'
 
