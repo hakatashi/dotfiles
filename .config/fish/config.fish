@@ -4,6 +4,8 @@ set fish_path $HOME/.oh-my-fish
 # Path to your custom folder (default path is ~/.oh-my-fish/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
+set --export LD_LIBRARY_PATH $LD_LIBRARY_PATH:$HOME/lib:$HOME/lib64
+
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
