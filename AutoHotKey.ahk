@@ -50,6 +50,12 @@ Pause::Media_Play_Pause
 
     sc079::^#Left
     sc070::^#Right
+
+    g::
+    Send #{a}
+    Sleep 500
+    Send {Enter}
+    return
 #If
 
 ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)

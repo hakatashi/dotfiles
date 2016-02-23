@@ -35,11 +35,12 @@
       "sort-lines"
       "ide-haskell"
       "haskell-ghc-mod"
-      "editor-background"
       "language-livescript"
       "linter-htmlhint"
       "nuclide-ocaml"
       "nuclide"
+      "editor-stats"
+      "editor-background"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     themes: [
@@ -59,7 +60,14 @@
     useHardwareAcceleration: true
   "editor-background":
     box3d: {}
-    image: {}
+    image:
+      backgroundSize: "cover"
+      overlayColor:
+        alpha: 1
+        blue: 0
+        green: 0
+        red: 0
+      url: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images/2016年1月25日/54872584_p0-2x.jpg"
     other: {}
     text: {}
     video: {}
