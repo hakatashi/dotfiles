@@ -33,6 +33,8 @@ balias .... 'cd ../../..'
 balias ..... 'cd ../../../..'
 balias ...... 'cd ../../../../..'
 
+balias :q 'exit'
+
 balias push 'git push origin HEAD'
 
 balias gitroot 'cd (git rev-parse --show-toplevel)'
