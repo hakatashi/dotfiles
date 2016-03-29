@@ -13,11 +13,12 @@
     js_jslint_happy: true
     language_css_default_beautifier: "Pretty Diff"
     language_erb_default_beautifier: "HTML Beautifier"
+  "atom-typescript": {}
   "autocomplete-plus":
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
-    scheme: "Isotope"
+    scheme: "Colors"
   "browser-plus": {}
   core:
     customFileTypes:
@@ -39,8 +40,10 @@
       "linter-htmlhint"
       "nuclide-ocaml"
       "nuclide"
-      "editor-stats"
       "editor-background"
+      "atom-typescript"
+      "language-review"
+      "editorconfig"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     themes: [
@@ -148,6 +151,12 @@
   editor:
     preferredLineLength: 100
 ".review.source":
+  editor:
+    preferredLineLength: 100
+".source.ts":
+  editor:
+    preferredLineLength: 100
+".source.tsx":
   editor:
     preferredLineLength: 100
 ".source.yaml":
