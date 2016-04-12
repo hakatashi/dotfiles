@@ -4,3 +4,6 @@
 [submodule ".config/base16-shell"]
 	path = .config/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
+[submodule ".bundle/git-fire"]
+	path = .bundle/git-fire
+	url = https://github.com/qw3rtman/git-fire.git
