@@ -16,6 +16,7 @@
 	cdiff = diff --cached --ignore-space-change
 	statsu = status
 	stauts = status
+	stastus = status
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
