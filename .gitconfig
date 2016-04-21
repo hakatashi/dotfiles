@@ -18,10 +18,13 @@
 	statu = status
 	stats = status
 	staut = status
+	c = checkout
 	statsu = status
 	stauts = status
 	stastus = status
 	comit = commit
+	stastu = status
+	chekcout = checkout
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
