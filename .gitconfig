@@ -20,6 +20,7 @@
 	statu = status
 	stats = status
 	staut = status
+	stastus = status
 	comit = commit
 [filter "lfs"]
 	clean = git-lfs clean %f

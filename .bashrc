@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+SCRIPT_PATH="$(readlink -m "$BASH_SOURCE")"
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -161,6 +163,15 @@ stty -ixon
 # Shelly integration
 SHELLY_HOME="$HOME/.shelly"; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHELLY_HOME/lib/shelly/init.sh"
 
+# Setup rbenv
+if [ -d "$HOME/.rbenv" ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
 # Setup nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use node
+
+# Setup bin directory as path of script
+export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"

@@ -6,6 +6,7 @@
 
 :: Fast access to Notepad
 doskey n=notepad $*
+doskey e=explorer $*
 
 doskey ls=ls --color=auto $*
 doskey grep=grep --color=auto $*

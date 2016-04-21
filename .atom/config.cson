@@ -13,11 +13,28 @@
     js_jslint_happy: true
     language_css_default_beautifier: "Pretty Diff"
     language_erb_default_beautifier: "HTML Beautifier"
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 239
+        green: 83
+        blue: 80
+        alpha: 1
+      accentColor:
+        red: 89
+        green: 252
+        blue: 255
+        alpha: 1
+      predefinedColor: "Red"
+    fonts:
+      fontSize: 14
+    ui: {}
+  "atom-typescript": {}
   "autocomplete-plus":
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
-    scheme: "Isotope"
+    scheme: "Colors"
   "browser-plus": {}
   core:
     customFileTypes:
@@ -39,8 +56,11 @@
       "linter-htmlhint"
       "nuclide-ocaml"
       "nuclide"
-      "editor-stats"
       "editor-background"
+      "language-review"
+      "editorconfig"
+      "linter-jshint"
+      "linter-js-standard"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     themes: [
@@ -86,19 +106,25 @@
       ideographicSpaceAsWihteSpace: true
   "language-review": {}
   linter:
-    showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
-  "linter-jshint": {}
+  "linter-js-standard": {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   nuclide:
     "nuclide-home":
       showHome: false
+  pigments:
+    markerType: "dot"
   "remote-sync": {}
   "tree-view":
     squashDirectoryNames: true
-  "vim-mode": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
   "vim-surround": {}
+  "webbox-color":
+    fillColorAsBackground: false
   welcome:
     showOnStartup: false
 ".asm.source.x86":
@@ -148,6 +174,12 @@
   editor:
     preferredLineLength: 100
 ".review.source":
+  editor:
+    preferredLineLength: 100
+".source.ts":
+  editor:
+    preferredLineLength: 100
+".source.tsx":
   editor:
     preferredLineLength: 100
 ".source.yaml":
