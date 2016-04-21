@@ -6,7 +6,7 @@ source $OMF_PATH/init.fish
 # Path to your custom folder (default path is ~/.oh-my-fish/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
-set --export LD_LIBRARY_PATH $LD_LIBRARY_PATH:$HOME/lib:$HOME/lib64
+set --export LD_LIBRARY_PATH $HOME/lib:$HOME/lib64
 
 # baliases
 balias push 'git push origin HEAD'
