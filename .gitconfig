@@ -19,6 +19,8 @@
 	stauts = status
 	statu = status
 	stats = status
+	staut = status
+	comit = commit
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
