@@ -1,6 +1,8 @@
 # Path to Oh My Fish install.
 set -gx OMF_PATH "/home/hakatashi/.local/share/omf"
 
+source $OMF_PATH/init.fish
+
 # Path to your custom folder (default path is ~/.oh-my-fish/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
@@ -57,5 +59,3 @@ balias f 'fuck'
 command --search hub > /dev/null; and begin
     eval (hub alias -s)
 end
-
-source $OMF_PATH/init.fish
