@@ -15,11 +15,11 @@
 	wdiff = diff --word-diff --ignore-space-change
 	cdiff = diff --cached --ignore-space-change
 	s = status --short --branch --untracked-files=all
-	statsu = status
-	stauts = status
 	statu = status
 	stats = status
 	staut = status
+	statsu = status
+	stauts = status
 	stastus = status
 	comit = commit
 [filter "lfs"]
