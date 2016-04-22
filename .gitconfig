@@ -7,7 +7,7 @@
 [color]
 	ui = always
 [push]
-	default = simple
+	default = upstream
 	followTags = true
 [alias]
 	#d = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x7F]+|[^[:space:]]' --ignore-space-change
