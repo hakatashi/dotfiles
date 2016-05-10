@@ -70,7 +70,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 16
+    fontSize: 17
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -110,6 +110,7 @@
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-tslint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   nuclide:
@@ -118,6 +119,8 @@
   pigments:
     markerType: "dot"
   "remote-sync": {}
+  tabs:
+    enableVcsColoring: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode":
