@@ -81,6 +81,7 @@ NeoBundle 'shawncplus/phpcomplete.vim'
 NeoBundle 'vim-scripts/po.vim--Jelenak'
 NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'jeetsukumaran/vim-indentwise'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
