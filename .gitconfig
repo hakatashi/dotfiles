@@ -11,8 +11,8 @@
 	followTags = true
 [alias]
 	#d = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x7F]+|[^[:space:]]' --ignore-space-change
-	d = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x2F\\x3A-\\x40\\x5B-\\x5E\\x60\\x7B-\\x7F]+|[^[:space:]]+' --ignore-space-change
-	dc = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x2F\\x3A-\\x40\\x5B-\\x5E\\x60\\x7B-\\x7F]+|[^[:space:]]+' --ignore-space-change --cached
+	d = diff --color-words --word-diff-regex='[$-\\w]+|.' --ignore-space-change
+	dc = diff --color-words --word-diff-regex='[$-\\w]+|.' --ignore-space-change --cached
 	wdiff = diff --word-diff --ignore-space-change
 	cdiff = diff --cached --ignore-space-change
 	s = status --short --branch --untracked-files=all
