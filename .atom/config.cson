@@ -9,6 +9,8 @@
       no_lead_zero: true
     css_newline_between_rules: true
     css_preserve_newlines: true
+    general:
+      _analyticsUserId: "61cd97b7-45cf-4d87-abdf-f4ef2e29957f"
     js_indent_with_tabs: true
     js_jslint_happy: true
     language_css_default_beautifier: "Pretty Diff"
@@ -34,6 +36,7 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
+    matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
   core:
@@ -106,6 +109,7 @@
       ideographicSpaceAsWihteSpace: true
   "language-review": {}
   linter:
+    showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
   "linter-jshint":
