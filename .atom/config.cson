@@ -1,4 +1,6 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   "atom-beautify":
     _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
     css:
@@ -107,6 +109,8 @@
     characterWidth: {}
     lineBreakingRule:
       ideographicSpaceAsWihteSpace: true
+  "keyboard-localization":
+    useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
     showErrorPanel: false
@@ -161,7 +165,6 @@
     preferredLineLength: 100
 ".jade.source":
   editor:
-    nonWordCharacters: "、。"
     preferredLineLength: 100
     showIndentGuide: false
     tabLength: 2
@@ -180,6 +183,7 @@
 ".pyjade.source":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".review.source":
   editor:
     preferredLineLength: 100
