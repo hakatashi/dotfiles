@@ -231,6 +231,8 @@ let g:airline_powerline_fonts = 1
 nnoremap J <Nop>
 nnoremap K <Nop>
 
+nmap <Home> ^
+
 " activate CamelCaseMotion
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b

@@ -62,7 +62,6 @@
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "language-review"
       "editorconfig"
       "linter-jshint"
       "linter-js-standard"
@@ -75,7 +74,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 17
+    fontSize: 18
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -124,6 +123,7 @@
   nuclide:
     "nuclide-home":
       showHome: false
+  "one-dark-ui": {}
   pigments:
     markerType: "dot"
   "remote-sync": {}
@@ -144,6 +144,7 @@
 ".basic.html.text":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".coffee.source":
   editor:
     preferredLineLength: 100
