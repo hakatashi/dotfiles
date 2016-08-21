@@ -61,11 +61,12 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'guileen/vim-node-dict'
 NeoBundle 'vim-scripts/nginx.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -229,3 +230,15 @@ let g:airline_powerline_fonts = 1
 " Unbind Shift-k and Shift-j, which are very often to misstype
 nnoremap J <Nop>
 nnoremap K <Nop>
+
+nmap <Home> ^
+
+" activate CamelCaseMotion
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge

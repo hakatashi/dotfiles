@@ -1,18 +1,22 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   "atom-beautify":
-    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
     css:
       convert_quotes: "single"
+      default_beautifier: "Pretty Diff"
       indent_char: "\t"
       indent_size: 4
       newline_between_rules: true
       no_lead_zero: true
-    css_newline_between_rules: true
-    css_preserve_newlines: true
-    js_indent_with_tabs: true
-    js_jslint_happy: true
-    language_css_default_beautifier: "Pretty Diff"
-    language_erb_default_beautifier: "HTML Beautifier"
+      preserve_newlines: true
+    erb:
+      default_beautifier: "HTML Beautifier"
+    general:
+      _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    js:
+      indent_with_tabs: true
+      jslint_happy: true
   "atom-material-ui":
     colors:
       abaseColor:
@@ -34,6 +38,7 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
+    matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
   core:
@@ -57,7 +62,6 @@
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "language-review"
       "editorconfig"
       "linter-jshint"
       "linter-js-standard"
@@ -70,7 +74,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 17
+    fontSize: 18
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -98,14 +102,19 @@
   "git-plus": {}
   "haskell-ghc-mod": {}
   "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule:
       ideographicSpaceAsWihteSpace: true
+  "keyboard-localization":
+    useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
+    showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
   "linter-jshint":
@@ -113,9 +122,12 @@
   "linter-tslint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  minimap:
+    absoluteMode: true
   nuclide:
     "nuclide-home":
       showHome: false
+  "one-dark-ui": {}
   pigments:
     markerType: "dot"
   "remote-sync": {}
@@ -136,6 +148,7 @@
 ".basic.html.text":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".coffee.source":
   editor:
     preferredLineLength: 100
@@ -157,7 +170,6 @@
     preferredLineLength: 100
 ".jade.source":
   editor:
-    nonWordCharacters: "、。"
     preferredLineLength: 100
     showIndentGuide: false
     tabLength: 2
@@ -176,6 +188,7 @@
 ".pyjade.source":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".review.source":
   editor:
     preferredLineLength: 100
