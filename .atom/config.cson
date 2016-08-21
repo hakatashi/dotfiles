@@ -1,4 +1,6 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   "atom-beautify":
     _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
     css:
@@ -9,6 +11,8 @@
       no_lead_zero: true
     css_newline_between_rules: true
     css_preserve_newlines: true
+    general:
+      _analyticsUserId: "61cd97b7-45cf-4d87-abdf-f4ef2e29957f"
     js_indent_with_tabs: true
     js_jslint_happy: true
     language_css_default_beautifier: "Pretty Diff"
@@ -34,6 +38,7 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
+    matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
   core:
@@ -70,7 +75,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty"
-    fontSize: 16
+    fontSize: 17
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -104,12 +109,16 @@
     characterWidth: {}
     lineBreakingRule:
       ideographicSpaceAsWihteSpace: true
+  "keyboard-localization":
+    useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
+    showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-tslint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   nuclide:
@@ -118,6 +127,8 @@
   pigments:
     markerType: "dot"
   "remote-sync": {}
+  tabs:
+    enableVcsColoring: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode":
@@ -154,7 +165,6 @@
     preferredLineLength: 100
 ".jade.source":
   editor:
-    nonWordCharacters: "、。"
     preferredLineLength: 100
     showIndentGuide: false
     tabLength: 2
@@ -173,6 +183,7 @@
 ".pyjade.source":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".review.source":
   editor:
     preferredLineLength: 100
