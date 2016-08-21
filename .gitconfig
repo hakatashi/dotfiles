@@ -28,6 +28,7 @@
 	chekcout = checkout
 	comit = commit
 	commti = commit
+	shoe = show
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

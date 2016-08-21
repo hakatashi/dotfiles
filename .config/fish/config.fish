@@ -59,3 +59,8 @@ balias f 'fuck'
 command --search hub > /dev/null; and begin
     eval (hub alias -s)
 end
+
+# rbenv
+if test -d ~/.rbenv
+    status --is-interactive; and . (rbenv init -|psub)
+end
