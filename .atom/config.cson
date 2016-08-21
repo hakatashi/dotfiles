@@ -2,21 +2,21 @@
   "activate-power-mode":
     autoToggle: false
   "atom-beautify":
-    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
     css:
       convert_quotes: "single"
+      default_beautifier: "Pretty Diff"
       indent_char: "\t"
       indent_size: 4
       newline_between_rules: true
       no_lead_zero: true
-    css_newline_between_rules: true
-    css_preserve_newlines: true
+      preserve_newlines: true
+    erb:
+      default_beautifier: "HTML Beautifier"
     general:
-      _analyticsUserId: "61cd97b7-45cf-4d87-abdf-f4ef2e29957f"
-    js_indent_with_tabs: true
-    js_jslint_happy: true
-    language_css_default_beautifier: "Pretty Diff"
-    language_erb_default_beautifier: "HTML Beautifier"
+      _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    js:
+      indent_with_tabs: true
+      jslint_happy: true
   "atom-material-ui":
     colors:
       abaseColor:
@@ -102,6 +102,8 @@
   "git-plus": {}
   "haskell-ghc-mod": {}
   "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
   "japanese-wrap":
@@ -120,6 +122,8 @@
   "linter-tslint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  minimap:
+    absoluteMode: true
   nuclide:
     "nuclide-home":
       showHome: false
