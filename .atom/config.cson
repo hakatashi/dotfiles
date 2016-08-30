@@ -114,6 +114,7 @@
     useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
+    errorPanelHeight: 115
     showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
@@ -153,6 +154,14 @@
   editor:
     preferredLineLength: 100
     tabLength: 2
+".css.postcss.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".css.postcss.source.sugarss":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
 ".diff.source":
   editor:
     preferredLineLength: 100
