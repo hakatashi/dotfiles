@@ -35,3 +35,5 @@ doskey a=atom . $*
 doskey weather=curl wttr.in/$1
 
 doskey wresume=wget --continue --retry-connrefused --tries=0 --timeout=5 $*
+
+doskey va=cmd /C "vagrant up && vagrant ssh"
