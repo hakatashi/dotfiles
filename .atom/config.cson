@@ -19,16 +19,8 @@
       jslint_happy: true
   "atom-material-ui":
     colors:
-      abaseColor:
-        red: 239
-        green: 83
-        blue: 80
-        alpha: 1
-      accentColor:
-        red: 89
-        green: 252
-        blue: 255
-        alpha: 1
+      abaseColor: "#ef5350"
+      accentColor: "#59fcff"
       predefinedColor: "Red"
     fonts:
       fontSize: 14
@@ -65,15 +57,21 @@
       "editorconfig"
       "linter-jshint"
       "linter-js-standard"
+      "atom-typescript"
+      "node-debugger"
+      "linter-tslint"
+      "remote-sync"
+      "language-review"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
+    telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
       "base16-syntax"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Ricty"
+    fontFamily: "Ricty Diminished"
     fontSize: 18
     invisibles: {}
     lineHeight: 1.2
@@ -194,6 +192,9 @@
 ".livescript.source":
   editor:
     preferredLineLength: 100
+".out.txt":
+  whitespace:
+    ensureSingleTrailingNewline: false
 ".pyjade.source":
   editor:
     preferredLineLength: 100
