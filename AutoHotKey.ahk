@@ -52,9 +52,10 @@ Pause::Media_Play_Pause
     sc070::^#Right
 
     g::
-    Send #{a}
-    Sleep 500
-    Send {Enter}
+    If (state)
+       state := 0
+    else
+       state := 1
     return
 #If
 
@@ -88,4 +89,71 @@ sc07b::Ctrl
 
 sc079::-
 sc070::^
+
 RAlt::\
+;     SetTitleMatch mode 2 enables AutoHotkey to only partially match program names, must be in the beginning of the script
+SetTitleMatchMode, 2
+
+
+
+;     Ctrl-E is now Ctrl-J, the shortcut for the Downloads tab in Google Chrome
+#IfWinActive ahk_class Chrome_WidgetWin_1
+^e::^j
+#IfWinActive
+
+;     QWERTY-Dvorak Toggle using ScrollLock key
+state := 1 ; 
+
+#If state=1 and not GetKeyState("Ctrl", "P")
+   #HotkeyInterval 1000000000
+   #MaxHotkeysPerInterval 9999999999999
+   -::[
+   ^::]
+   q::'
+   +q::"
+   w::,
+   e::.
+   r::p
+   t::y
+   y::f
+   u::g
+   i::c
+   o::r
+   p::l
+   @::/
+   [::=
+   +[::+
+   ]::\
+   s::o
+   d::e
+   f::u
+   g::i
+   h::d
+   j::h
+   k::t
+   l::n
+   `;::s
+   :::Send -
+   *::Send _
+   z::Send `;
+   +z::Send :
+   x::q
+   c::j
+   v::k
+   b::x
+   n::b
+   ,::w
+   .::v
+   /::z
+   sc029::`
+   +sc029::~
+   +2::Send @
+   +6::Send {^}
+   +7::&
+   +8::*
+   +9::(
+   +0::)
+   RWin::-
+   +RWin::=
+   ^RWin::_
+#If
