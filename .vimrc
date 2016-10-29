@@ -231,8 +231,3 @@ nnoremap J <Nop>
 nnoremap K <Nop>
 
 nmap <Home> ^
-
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
