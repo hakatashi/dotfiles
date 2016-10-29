@@ -62,6 +62,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'digitaltoad/vim-pug'
+NeoBundle 'deton/jasegment.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'scrooloose/syntastic'
@@ -231,3 +232,5 @@ nnoremap J <Nop>
 nnoremap K <Nop>
 
 nmap <Home> ^
+
+let g:jasegment#highlight = 2
