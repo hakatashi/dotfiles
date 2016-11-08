@@ -2,6 +2,8 @@
   "activate-power-mode":
     autoToggle: false
   "atom-beautify":
+    c:
+      configPath: "C:\\Users\\hakatashi\\dotfiles\\.uncrustify.cfg"
     css:
       convert_quotes: "single"
       default_beautifier: "Pretty Diff"
@@ -113,7 +115,6 @@
   "language-review": {}
   linter:
     errorPanelHeight: 115
-    showErrorPanel: false
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
   "linter-jshint":
