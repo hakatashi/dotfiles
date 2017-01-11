@@ -41,12 +41,12 @@ Pause::Media_Play_Pause
     Down::Volume_Down
 
     ; Instant search from everywhere
-    sc07b::
-    SetTitleMatchMode, 2
-    WinActivate, Google Chrome ahk_class Chrome_WidgetWin_1
-    send ^t
-    SetTitleMatchMode, 1
-    return
+    ; sc07b::
+    ; SetTitleMatchMode, 2
+    ; WinActivate, Google Chrome ahk_class Chrome_WidgetWin_1
+    ; send ^t
+    ; SetTitleMatchMode, 1
+    ; return
 
     sc079::^#Left
     sc070::^#Right
