@@ -30,6 +30,8 @@ doskey less=less -R $*
 
 doskey be=bundle exec $*
 doskey bers=bundle exec rails server $*
+doskey nr=npm run $*
+doskey dm=docker-machine $*
 doskey a=atom . $*
 
 doskey weather=curl wttr.in/$1

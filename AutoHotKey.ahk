@@ -41,12 +41,12 @@ Pause::Media_Play_Pause
     Down::Volume_Down
 
     ; Instant search from everywhere
-    sc07b::
-    SetTitleMatchMode, 2
-    WinActivate, Google Chrome ahk_class Chrome_WidgetWin_1
-    send ^t
-    SetTitleMatchMode, 1
-    return
+    ; sc07b::
+    ; SetTitleMatchMode, 2
+    ; WinActivate, Google Chrome ahk_class Chrome_WidgetWin_1
+    ; send ^t
+    ; SetTitleMatchMode, 1
+    ; return
 
     sc079::^#Left
     sc070::^#Right
@@ -67,6 +67,7 @@ ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int",
 ; Transparently maps Backslash key of JIS Keyboard into TRUE Backslash
 sc073::\
 +sc073::_
+RCtrl::
 
 #If WinActive("ahk_exe putty.exe") or WinActive("ahk_exe kitty.exe")
     ^Tab::
@@ -100,6 +101,8 @@ SetTitleMatchMode, 2
 #IfWinActive ahk_class Chrome_WidgetWin_1
 ^e::^j
 #IfWinActive
+
+^n::return
 
 ;     QWERTY-Dvorak Toggle using ScrollLock key
 state := 1 ; 

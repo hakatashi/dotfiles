@@ -40,6 +40,9 @@
       source: [
         "[object Object]"
       ]
+      "source.review": [
+        "re"
+      ]
       "source.xml": [
         "ttx"
       ]
@@ -56,14 +59,18 @@
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "editorconfig"
       "linter-jshint"
       "linter-js-standard"
       "atom-typescript"
       "node-debugger"
       "linter-tslint"
       "remote-sync"
-      "language-review"
+      "minimap"
+      "language-gfm"
+      "whitespace"
+    ]
+    packagesWithKeymapsDisabled: [
+      "zentabs"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     telemetryConsent: "limited"
@@ -99,7 +106,9 @@
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "865a8777-6d01-45e6-9f7f-7f93aaa3dbf1"
   "haskell-ghc-mod": {}
   "highlight-selected":
     highlightBackground: true
@@ -137,11 +146,19 @@
     squashDirectoryNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: false
+  "vim-mode-plus":
+    highlightSearch: true
+    incrementalSearch: true
   "vim-surround": {}
   "webbox-color":
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+  zentabs:
+    maximumOpenedTabs: 8
+    neverCloseDirty: true
+    neverCloseNew: true
+    neverCloseUnsaved: true
 ".asm.source.x86":
   editor:
     preferredLineLength: 100
