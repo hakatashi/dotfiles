@@ -192,3 +192,8 @@ fi
 if [ -s "$HOME/torch/install/bin/torch-activate" ]; then
     . ~/torch/install/bin/torch-activate
 fi
+
+# Setup Heroku Toolbelt
+if [ -d "/usr/local/heroku/bin" ]; then
+    export PATH="/usr/local/heroku/bin:$PATH"
+fi
