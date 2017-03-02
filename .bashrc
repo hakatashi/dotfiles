@@ -182,3 +182,8 @@ if [ -d "$HOME/.pyenv" ]; then
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
+
+# Setup srilm
+if [ -d "$HOME/srilm-dir/bin/i686-m64" ]; then
+    export PATH="~/srilm-dir/bin/i686-m64:$PATH"
+fi
