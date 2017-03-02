@@ -187,3 +187,8 @@ fi
 if [ -d "$HOME/srilm-dir/bin/i686-m64" ]; then
     export PATH="~/srilm-dir/bin/i686-m64:$PATH"
 fi
+
+# Setup torch
+if [ -s "$HOME/torch/install/bin/torch-activate" ]; then
+    . ~/torch/install/bin/torch-activate
+fi
