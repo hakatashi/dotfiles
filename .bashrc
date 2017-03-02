@@ -175,3 +175,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Setup bin directory as path of script
 export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
+
+# Setup pyenv
+if [ -d "$HOME/.pyenv" ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
