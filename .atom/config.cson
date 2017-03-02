@@ -1,30 +1,28 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
   "atom-beautify":
-    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    c:
+      configPath: "C:\\Users\\hakatashi\\dotfiles\\.uncrustify.cfg"
     css:
       convert_quotes: "single"
+      default_beautifier: "Pretty Diff"
       indent_char: "\t"
       indent_size: 4
       newline_between_rules: true
       no_lead_zero: true
-    css_newline_between_rules: true
-    css_preserve_newlines: true
-    js_indent_with_tabs: true
-    js_jslint_happy: true
-    language_css_default_beautifier: "Pretty Diff"
-    language_erb_default_beautifier: "HTML Beautifier"
+      preserve_newlines: true
+    erb:
+      default_beautifier: "HTML Beautifier"
+    general:
+      _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    js:
+      indent_with_tabs: true
+      jslint_happy: true
   "atom-material-ui":
     colors:
-      abaseColor:
-        red: 239
-        green: 83
-        blue: 80
-        alpha: 1
-      accentColor:
-        red: 89
-        green: 252
-        blue: 255
-        alpha: 1
+      abaseColor: "#ef5350"
+      accentColor: "#59fcff"
       predefinedColor: "Red"
     fonts:
       fontSize: 14
@@ -34,12 +32,16 @@
     autoActivationDelay: 300
     confirmCompletion: "enter"
   "base16-syntax":
+    matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
   core:
     customFileTypes:
       source: [
         "[object Object]"
+      ]
+      "source.review": [
+        "re"
       ]
       "source.xml": [
         "ttx"
@@ -57,20 +59,29 @@
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "language-review"
-      "editorconfig"
       "linter-jshint"
       "linter-js-standard"
+      "atom-typescript"
+      "node-debugger"
+      "linter-tslint"
+      "remote-sync"
+      "minimap"
+      "language-gfm"
+      "whitespace"
+    ]
+    packagesWithKeymapsDisabled: [
+      "zentabs"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
+    telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
       "base16-syntax"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Ricty"
-    fontSize: 16
+    fontFamily: "Ricty Diminished"
+    fontSize: 18
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -95,48 +106,78 @@
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "865a8777-6d01-45e6-9f7f-7f93aaa3dbf1"
   "haskell-ghc-mod": {}
   "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule:
       ideographicSpaceAsWihteSpace: true
+  "keyboard-localization":
+    useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
+    errorPanelHeight: 115
     statusBar: "Show error if the cursor is in range"
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-tslint": {}
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  minimap:
+    absoluteMode: true
   nuclide:
     "nuclide-home":
       showHome: false
+  "one-dark-ui": {}
   pigments:
     markerType: "dot"
   "remote-sync": {}
+  tabs:
+    enableVcsColoring: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: false
+  "vim-mode-plus":
+    highlightSearch: true
+    incrementalSearch: true
   "vim-surround": {}
   "webbox-color":
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+  zentabs:
+    maximumOpenedTabs: 8
+    neverCloseDirty: true
+    neverCloseNew: true
+    neverCloseUnsaved: true
 ".asm.source.x86":
   editor:
     preferredLineLength: 100
 ".basic.html.text":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".coffee.source":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".css.postcss.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".css.postcss.source.sugarss":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
 ".diff.source":
   editor:
     preferredLineLength: 100
@@ -154,7 +195,6 @@
     preferredLineLength: 100
 ".jade.source":
   editor:
-    nonWordCharacters: "、。"
     preferredLineLength: 100
     showIndentGuide: false
     tabLength: 2
@@ -170,9 +210,13 @@
 ".livescript.source":
   editor:
     preferredLineLength: 100
+".out.txt":
+  whitespace:
+    ensureSingleTrailingNewline: false
 ".pyjade.source":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".review.source":
   editor:
     preferredLineLength: 100

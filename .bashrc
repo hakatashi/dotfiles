@@ -112,6 +112,8 @@ alias f='fuck'
 alias be='bundle exec'
 alias bers='bundle exec rails server'
 alias befs='bundle exec foreman start'
+alias nr='npm run'
+alias dm='docker-machine'
 
 alias weather='curl wttr.in'
 
@@ -167,6 +169,13 @@ SHELLY_HOME="$HOME/.shelly"; [ -s "$SHELLY_HOME/lib/shelly/init.sh" ] && . "$SHE
 if [ -d "$HOME/.rbenv" ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
+fi
+
+# pyenv
+if [ -d "$HOME/.pyenv" ]; then
+  export PATH="/home/hakatashi/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 # Setup nvm

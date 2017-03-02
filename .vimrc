@@ -61,9 +61,10 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'digitaltoad/vim-pug'
+NeoBundle 'deton/jasegment.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'guileen/vim-node-dict'
@@ -81,6 +82,7 @@ NeoBundle 'shawncplus/phpcomplete.vim'
 NeoBundle 'vim-scripts/po.vim--Jelenak'
 NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'jeetsukumaran/vim-indentwise'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['javascript']}}
@@ -228,3 +230,7 @@ let g:airline_powerline_fonts = 1
 " Unbind Shift-k and Shift-j, which are very often to misstype
 nnoremap J <Nop>
 nnoremap K <Nop>
+
+nmap <Home> ^
+
+let g:jasegment#highlight = 2
