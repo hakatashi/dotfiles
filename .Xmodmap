@@ -1,0 +1,18 @@
+keycode 66 = Mode_switch
+remove lock = Mode_switch
+
+keycode 26 = period greater Delete Delete
+
+keycode 29 = f F Home Home
+keycode 30 = g G Next Next
+keycode 31 = c C Prior Prior
+keycode 32 = r R End End
+
+keycode 40 = e E BackSpace BackSpace
+keycode 41 = u U Escape Escape
+
+keycode 43 = d D Left Left
+keycode 44 = h H Down Down
+keycode 45 = t T Up Up
+keycode 46 = n N Right Right
+keycode 47 = s S Zenkaku_Hankaku Zenkaku_Hankaku
