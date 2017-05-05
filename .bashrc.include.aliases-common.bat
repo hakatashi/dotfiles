@@ -32,6 +32,7 @@ doskey be=bundle exec $*
 doskey bers=bundle exec rails server $*
 doskey nr=npm run $*
 doskey dm=docker-machine $*
+doskey dc=docker-compose $*
 doskey a=atom . $*
 
 doskey weather=curl wttr.in/$1
@@ -39,3 +40,5 @@ doskey weather=curl wttr.in/$1
 doskey wresume=wget --continue --retry-connrefused --tries=0 --timeout=5 $*
 
 doskey va=cmd /C "vagrant up && vagrant ssh"
+
+doskey Ç…Ç·Å[ÇÒ=yarn $*

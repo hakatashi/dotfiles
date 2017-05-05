@@ -114,6 +114,7 @@ alias bers='bundle exec rails server'
 alias befs='bundle exec foreman start'
 alias nr='npm run'
 alias dm='docker-machine'
+alias dc='docker-compose'
 
 alias weather='curl wttr.in'
 
