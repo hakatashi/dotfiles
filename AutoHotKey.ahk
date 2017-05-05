@@ -13,6 +13,7 @@ Pause::Media_Play_Pause
     u::PgDn
     i::PgUp
     o::End
+    p::Insert
     `;::vkF4sc029
 
     m::Send +{F10}
