@@ -8,6 +8,8 @@ source $OMF_PATH/init.fish
 
 set --export LD_LIBRARY_PATH $HOME/lib:$HOME/lib64
 
+set --export LD_PRELOAD "$HOME/stderred/build/libstderred.so"
+
 # baliases
 balias push 'git push origin HEAD'
 

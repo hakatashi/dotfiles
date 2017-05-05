@@ -185,3 +185,30 @@ export NVM_DIR="$HOME/.nvm"
 
 # Setup bin directory as path of script
 export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
+
+# Setup pyenv
+if [ -d "$HOME/.pyenv" ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
+
+# Setup srilm
+if [ -d "$HOME/srilm-dir/bin/i686-m64" ]; then
+    export PATH="~/srilm-dir/bin/i686-m64:$PATH"
+fi
+
+# Setup torch
+if [ -s "$HOME/torch/install/bin/torch-activate" ]; then
+    . ~/torch/install/bin/torch-activate
+fi
+
+# Setup Heroku Toolbelt
+if [ -d "/usr/local/heroku/bin" ]; then
+    export PATH="/usr/local/heroku/bin:$PATH"
+fi
+
+# Setup Promptline
+if [ -s "$HOME/.shell_prompt.sh" ]; then
+    . "$HOME/.shell_prompt.sh"
+fi
