@@ -1,4 +1,5 @@
 "*":
+  Zen: {}
   "activate-power-mode":
     autoToggle: false
   "atom-beautify":
@@ -68,11 +69,13 @@
       "minimap"
       "language-gfm"
       "whitespace"
+      "linter-rubocop"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
+    restorePreviousWindowsOnStart: false
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
@@ -81,10 +84,11 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty Diminished"
-    fontSize: 18
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
+    showIndentGuide: true
     showInvisibles: true
     softTabs: false
     tabLength: 4
@@ -123,12 +127,14 @@
     useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
-    errorPanelHeight: 115
     statusBar: "Show error if the cursor is in range"
+  "linter-eslint": {}
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-tslint": {}
+  "linter-ui-default":
+    showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   minimap:
@@ -149,13 +155,14 @@
   "vim-mode-plus":
     highlightSearch: true
     incrementalSearch: true
+    useSmartcaseForSearch: true
   "vim-surround": {}
   "webbox-color":
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
   zentabs:
-    maximumOpenedTabs: 8
+    maximumOpenedTabs: 6
     neverCloseDirty: true
     neverCloseNew: true
     neverCloseUnsaved: true
