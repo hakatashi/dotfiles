@@ -6,7 +6,7 @@
 
 :: Fast access to Notepad
 doskey n=notepad $*
-doskey e=explorer $*
+doskey e=explorer . $*
 
 doskey ls=ls --color=auto $*
 doskey grep=grep --color=auto $*
@@ -37,8 +37,12 @@ doskey a=atom . $*
 
 doskey weather=curl wttr.in/$1
 
-doskey wresume=wget --continue --retry-connrefused --tries=0 --timeout=5 $*
+doskey wresume=wget --content-disposition --continue --retry-connrefused --tries=0 --timeout=5 $*
 
 doskey va=cmd /C "vagrant up && vagrant ssh"
 
 doskey Ç…Ç·Å[ÇÒ=yarn $*
+
+:: I'm in Windows now
+doskey which=where $*
+doskey ifconfig=ipconfig $*
