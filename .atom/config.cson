@@ -37,6 +37,8 @@
     scheme: "Colors"
   "browser-plus": {}
   core:
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
     customFileTypes:
       source: [
         "[object Object]"
@@ -70,12 +72,15 @@
       "language-gfm"
       "whitespace"
       "linter-rubocop"
+      "language-review"
+      "atom-html-preview"
+      "git-plus"
+      "terminal-plus"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
-    restorePreviousWindowsOnStart: false
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
@@ -128,12 +133,14 @@
   "language-review": {}
   linter:
     statusBar: "Show error if the cursor is in range"
-  "linter-eslint": {}
+  "linter-eslint":
+    fixOnSave: true
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-tslint": {}
   "linter-ui-default":
+    panelHeight: 71
     showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
@@ -145,9 +152,19 @@
   "one-dark-ui": {}
   pigments:
     markerType: "dot"
+  "platformio-ide-terminal":
+    core:
+      shell: "C:\\WINDOWS\\System32\\cmd.exe"
+    style: {}
+    toggles:
+      autoClose: true
   "remote-sync": {}
   tabs:
     enableVcsColoring: true
+  "terminal-plus":
+    core: {}
+    toggles:
+      autoClose: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode":
@@ -155,6 +172,7 @@
   "vim-mode-plus":
     highlightSearch: true
     incrementalSearch: true
+    useClipboardAsDefaultRegister: false
     useSmartcaseForSearch: true
   "vim-surround": {}
   "webbox-color":

@@ -11,6 +11,7 @@
   'enter': 'autocomplete-plus:confirm'
 '.editor:not(.mini)':
   'shift-tab': 'snippets:expand'
+  'shift-ctrl-h': 'hex:view'
 'atom-text-editor.vim-mode-plus':
   'ctrl-f': 'unset!'
   'ctrl-c': 'unset!'
@@ -42,3 +43,7 @@
   'ctrl-cmd-i': 'cursor-history:next-within-editor'
   'ctrl-cmd-o': 'cursor-history:prev-within-editor'
   'ctrl-j': 'fuzzy-finder:toggle-file-finder'
+'.platform-win32 atom-workspace':
+  'ctrl-shift-Z': 'unset!'
+'.platform-win32 atom-workspace atom-text-editor:not(.mini)':
+  'ctrl-shift-Z': 'unset!'
