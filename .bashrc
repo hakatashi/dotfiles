@@ -22,6 +22,9 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Set tab size
+tabs 4
+
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -106,7 +109,7 @@ alias push='git push origin HEAD'
 alias phpunit='\phpunit --colors'
 alias less='\less -R'
 
-alias wresume='wget --continue --retry-connrefused --tries=0 --timeout=5'
+alias wresume='wget --content-disposition --continue --retry-connrefused --tries=0 --timeout=5'
 
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias f='fuck'
