@@ -89,6 +89,9 @@ RCtrl::
 
 ; Disable Muhenkan-key, because my laptop keyboard has been broken.
 sc07b::return
+^sc07b::return
++sc07b::return
+^+sc07b::return
 
 sc079::-
 sc070::^
