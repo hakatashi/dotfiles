@@ -127,6 +127,9 @@ alias weather='curl wttr.in'
 alias where=which
 alias ipconfig=ifconfig
 
+alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
+alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
