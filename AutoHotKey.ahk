@@ -1,3 +1,4 @@
+#InstallKeybdHook
 #PgUp::Volume_Up
 #PgDn::Volume_Down
 
@@ -87,11 +88,8 @@ RCtrl::
     return
 #if
 
-; Disable Muhenkan-key, because my laptop keyboard has been broken.
-sc07b::return
-^sc07b::return
-+sc07b::return
-^+sc07b::return
+; My laptop keyboard has been fixed :)
+sc07b::Alt
 
 sc079::-
 sc070::^
