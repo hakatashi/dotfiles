@@ -1,22 +1,19 @@
 .custom-decorations {
     background: #181A1D;
 }
+
 body {
     -webkit-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
     -webkit-font-smoothing: subpixel-antialiased;
     font-smoothing: subpixel-antialiased;
 }
+
 atom-text-editor {
     text-rendering: optimizeLegibility;
     //font-weight: bold;
 }
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".html"]:before, .icon-file-text[data-name$=".html"]:before {
-    color: #4175AC;
-}
-.file-icons-tab-pane-icon atom-pane .tab-bar .tab .title[data-path][data-name$=".html.erb"]:before, .icon-file-text[data-name$=".html.erb"]:before {
-    color: #3639AF;
-}
+
 .editor-background-line {
     transform: translate3d(0, 0, 0) scale(1, 1.4) !important;
 
@@ -29,6 +26,35 @@ atom-text-editor {
         visibility: hidden;
     }
 }
+
 .tree-view {
     overflow: auto;
+
+    span.name.icon[data-name$=".html"]::before {
+        color: #4175AC;
+    }
+
+    span.name.icon[data-name$=".html.erb"]::before {
+        color: #3639AF;
+    }
+
+    span.name.icon[data-name$="_spec.rb"]::before {
+        color: #a63c84;
+    }
+}
+
+.list-tree.has-collapsable-children {
+    li.list-item {
+        margin-left: 12px;
+    }
+
+    .list-nested-item {
+        & > .list-tree > li, & > .list-group > li {
+            padding-left: 12px;
+        }
+
+        .list-item::before {
+            margin-right: 4px;
+        }
+    }
 }

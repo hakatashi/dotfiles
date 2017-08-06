@@ -29,6 +29,10 @@
 'atom-text-editor.vim-mode-plus.visual-mode:not(.insert-mode)':
   'S': 'vim-mode-plus:surround'
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'up': 'vim-mode-plus:move-up-screen'
+  'k': 'vim-mode-plus:move-up-screen'
+  'down': 'vim-mode-plus:move-down-screen'
+  'j': 'vim-mode-plus:move-down-screen'
   'ctrl-f': 'unset!'
   'ctrl-c': 'unset!'
   'ctrl-x': 'unset!'

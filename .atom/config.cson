@@ -1,5 +1,8 @@
 "*":
-  Zen: {}
+  Zen:
+    fullscreen: false
+    gutter: true
+    softWrap: true
   "activate-power-mode":
     autoToggle: false
   "atom-beautify":
@@ -22,12 +25,18 @@
       jslint_happy: true
   "atom-material-ui":
     colors:
-      abaseColor: "#ef5350"
-      accentColor: "#59fcff"
-      predefinedColor: "Red"
+      abaseColor: "#ffa726"
+      accentColor: "#9f6918"
+      predefinedColor: "Orange"
     fonts:
       fontSize: 14
-    ui: {}
+    tabs: {}
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "atom-slide-show":
+    imageDir: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images/2017年7月29日"
+    updateInterval: 3
   "atom-typescript": {}
   "autocomplete-plus":
     autoActivationDelay: 300
@@ -43,6 +52,9 @@
       source: [
         "[object Object]"
       ]
+      "source.json5": [
+        ".babelrc"
+      ]
       "source.review": [
         "re"
       ]
@@ -55,27 +67,19 @@
       "grunt-runner"
       "video-player"
       "sort-lines"
-      "ide-haskell"
-      "haskell-ghc-mod"
-      "language-livescript"
-      "linter-htmlhint"
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "linter-jshint"
       "linter-js-standard"
       "atom-typescript"
-      "node-debugger"
       "linter-tslint"
       "remote-sync"
-      "minimap"
       "language-gfm"
       "whitespace"
-      "linter-rubocop"
       "language-review"
       "atom-html-preview"
       "git-plus"
-      "terminal-plus"
+      "atom-slide-show"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -132,15 +136,21 @@
     useKeyboardLayout: "ja_JP"
   "language-review": {}
   linter:
+    disabledProviders: [
+      "RuboCop"
+    ]
     statusBar: "Show error if the cursor is in range"
   "linter-eslint":
     fixOnSave: true
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+    linterTimeout: 30000
   "linter-tslint": {}
   "linter-ui-default":
-    panelHeight: 71
+    panelHeight: 81
     showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
@@ -254,6 +264,7 @@
 ".source.yaml":
   editor:
     preferredLineLength: 100
+    softWrap: true
 ".text.xml":
   editor:
     preferredLineLength: 100
