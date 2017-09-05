@@ -58,3 +58,28 @@ atom-text-editor {
         }
     }
 }
+
+.atom-dock-mask {
+    background-color: rgba(17, 17, 17, 0.3);
+}
+
+atom-pane-container atom-pane, .amu-panel-contrast atom-panel, .amu-panel-contrast atom-panel.tool-panel, atom-text-editor .gutter, .amu-panel-contrast .tab-bar, .status-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tab-bar .tab.active {
+    background-color: #0d0d0d;
+}
+
+.amu-panel-contrast .tree-view, .custom-decorations {
+    background-color: transparent;
+}
+
+.editor-stats {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
