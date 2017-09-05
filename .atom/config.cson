@@ -35,12 +35,14 @@
       panelContrast: true
       panelShadows: true
   "atom-slide-show":
-    imageDir: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images/2017年7月29日"
-    updateInterval: 3
+    imageDir: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images"
+    usePackageStyle: true
   "atom-typescript": {}
   "autocomplete-plus":
     autoActivationDelay: 300
     confirmCompletion: "enter"
+  "autoupdate-packages":
+    lastUpdateTimestamp: 1504593497944
   "base16-syntax":
     matchUserInterfaceTheme: false
     scheme: "Colors"
@@ -79,7 +81,6 @@
       "language-review"
       "atom-html-preview"
       "git-plus"
-      "atom-slide-show"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -160,8 +161,7 @@
     "nuclide-home":
       showHome: false
   "one-dark-ui": {}
-  pigments:
-    markerType: "dot"
+  pigments: {}
   "platformio-ide-terminal":
     core:
       shell: "C:\\WINDOWS\\System32\\cmd.exe"
