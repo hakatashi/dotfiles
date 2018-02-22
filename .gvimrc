@@ -23,6 +23,7 @@ if has('win32')
   let g:airline_symbols.paste = 'p'
   let g:airline_powerline_fonts = 1
   set guifont=Ricty_Diminished_with_Fira_Code:h10:cSHIFTJIS:qDRAFT
+  set renderoptions=type:directx
 
   set linespace=1
 elseif has('mac')
