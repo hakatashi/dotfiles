@@ -242,6 +242,7 @@ let g:airline_symbols.linenr = 'l'
 let g:airline#extensions#tabline#left_sep = '>'
 let g:airline#extensions#tabline#left_alt_sep = '>'
 let g:airline_symbols.paste = 'p'
+let g:airline_section_b = airline#section#create(['U+%04B'])
 let g:airline_powerline_fonts = 1
 
 " Unbind Shift-k and Shift-j, which are very often to misstype
