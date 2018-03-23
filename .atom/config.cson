@@ -50,11 +50,10 @@
     lastUpdateTimestamp: 1504593497944
   "base16-syntax":
     matchUserInterfaceTheme: false
-    scheme: "Colors"
+    scheme: "Darktooth"
   "browser-plus": {}
   core:
     autoHideMenuBar: true
-    closeDeletedFileTabs: true
     customFileTypes:
       source: [
         "[object Object]"
@@ -85,6 +84,7 @@
       "language-review"
       "atom-html-preview"
       "git-plus"
+      "ide-typescript"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -92,12 +92,13 @@
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
+      "one-dark-ui"
       "base16-syntax"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Ricty Diminished"
+    fontFamily: "Ricty Diminished with Fira Code"
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -143,6 +144,8 @@
   linter:
     disabledProviders: [
       "RuboCop"
+      "JSHint"
+      "dockerlint"
     ]
     statusBar: "Show error if the cursor is in range"
   "linter-eslint":
@@ -173,8 +176,10 @@
     toggles:
       autoClose: true
   "remote-sync": {}
+  "status-bar": {}
   tabs:
     enableVcsColoring: true
+  teletype: {}
   "terminal-plus":
     core: {}
     toggles:
@@ -220,6 +225,9 @@
 ".diff.source":
   editor:
     preferredLineLength: 100
+".gemfile.ruby.source":
+  editor:
+    tabLength: 2
 ".html.js.text":
   editor:
     preferredLineLength: 100
@@ -259,6 +267,9 @@
 ".review.source":
   editor:
     preferredLineLength: 100
+".ruby.source":
+  editor:
+    tabLength: 2
 ".source.ts":
   editor:
     preferredLineLength: 100
