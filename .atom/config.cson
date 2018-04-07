@@ -27,7 +27,7 @@
     "atom-ide-diagnostics-ui":
       showDiagnosticTraces: true
     use:
-      "atom-ide-diagnostics-ui": false
+      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors:
       abaseColor: "#ffa726"
@@ -85,6 +85,7 @@
       "atom-html-preview"
       "git-plus"
       "ide-typescript"
+      "minimap"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -98,7 +99,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty Diminished with Fira Code"
-    fontSize: 15
+    fontSize: 13
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -280,6 +281,7 @@
   editor:
     preferredLineLength: 100
     softWrap: true
+    tabLength: 2
 ".text.xml":
   editor:
     preferredLineLength: 100
