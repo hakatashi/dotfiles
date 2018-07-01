@@ -96,10 +96,10 @@
       "one-dark-ui"
       "base16-syntax"
     ]
+    uriHandlerRegistration: "always"
   docblockr: {}
   editor:
     fontFamily: "Ricty Diminished with Fira Code"
-    fontSize: 13
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -147,10 +147,10 @@
       "RuboCop"
       "JSHint"
       "dockerlint"
+      "ESLint"
     ]
     statusBar: "Show error if the cursor is in range"
-  "linter-eslint":
-    fixOnSave: true
+  "linter-eslint": {}
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
@@ -159,8 +159,7 @@
     linterTimeout: 30000
   "linter-tslint": {}
   "linter-ui-default":
-    panelHeight: 143
-    showPanel: true
+    panelHeight: 72
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   minimap:
@@ -176,6 +175,9 @@
     style: {}
     toggles:
       autoClose: true
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    useEslint: true
   "remote-sync": {}
   "status-bar": {}
   tabs:
@@ -199,6 +201,8 @@
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
   zentabs:
     maximumOpenedTabs: 6
     neverCloseDirty: true
@@ -261,6 +265,10 @@
 ".out.txt":
   whitespace:
     ensureSingleTrailingNewline: false
+".pug.source":
+  editor:
+    tabLength: 2
+    tabType: "soft"
 ".pyjade.source":
   editor:
     preferredLineLength: 100
