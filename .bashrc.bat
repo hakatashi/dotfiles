@@ -10,4 +10,4 @@ for %%f in ("%~dp0\.bashrc.include.*.bat") do call "%%~ff"
 chcp 65001 > NUL
 
 :: Displays Today's xkcd
-C:\Python36\python %HOME%\dotfiles\xkcd.py
+:: C:\Python36\python %HOME%\dotfiles\xkcd.py
