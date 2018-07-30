@@ -23,6 +23,9 @@
     js:
       indent_with_tabs: true
       jslint_happy: true
+    python:
+      default_beautifier: "yapf"
+      formatter: "yapf"
   "atom-ide-ui":
     "atom-ide-diagnostics-ui":
       showDiagnosticTraces: true
@@ -86,6 +89,7 @@
       "git-plus"
       "ide-typescript"
       "minimap"
+      "node-debugger"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -147,7 +151,6 @@
       "RuboCop"
       "JSHint"
       "dockerlint"
-      "ESLint"
     ]
     statusBar: "Show error if the cursor is in range"
   "linter-eslint": {}
