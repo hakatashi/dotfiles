@@ -64,7 +64,10 @@ Pause::Media_Play_Pause
 ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
 
 ^SPACE::  Winset, Alwaysontop, , A
+
+#If !WinActive("ahk_class Chrome_WidgetWin_1")
 ^+v::send +{Insert}
+#If
 
 ; Transparently maps Backslash key of JIS Keyboard into TRUE Backslash
 sc073::\
@@ -98,17 +101,13 @@ RAlt::\
 ;     SetTitleMatch mode 2 enables AutoHotkey to only partially match program names, must be in the beginning of the script
 SetTitleMatchMode, 2
 
-
-
 ;     Ctrl-E is now Ctrl-J, the shortcut for the Downloads tab in Google Chrome
 #IfWinActive ahk_class Chrome_WidgetWin_1
 ^e::^j
 #IfWinActive
 
-^n::return
-
 ;     QWERTY-Dvorak Toggle using ScrollLock key
-state := 1 ; 
+state := 1 ;
 
 #If state=1 and not GetKeyState("Ctrl", "P")
    #HotkeyInterval 1000000000
