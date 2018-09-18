@@ -181,6 +181,7 @@ fi
 # Setup nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use node
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Setup bin directory as path of script
 export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
