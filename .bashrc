@@ -22,6 +22,9 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Set tab size
+tabs 4
+
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -106,6 +109,8 @@ alias push='git push origin HEAD'
 alias phpunit='\phpunit --colors'
 alias less='\less -R'
 
+alias wresume='wget --content-disposition --continue --retry-connrefused --tries=0 --timeout=5'
+
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias f='fuck'
 
@@ -114,8 +119,16 @@ alias bers='bundle exec rails server'
 alias befs='bundle exec foreman start'
 alias nr='npm run'
 alias dm='docker-machine'
+alias dc='docker-compose'
 
 alias weather='curl wttr.in'
+
+# I'm in UNIX now
+alias where=which
+alias ipconfig=ifconfig
+
+alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
+alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
