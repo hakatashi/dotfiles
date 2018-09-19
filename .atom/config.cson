@@ -5,6 +5,9 @@
     softWrap: true
   "activate-power-mode":
     autoToggle: false
+    plugins:
+      playAudio: true
+      screenShake: true
   "atom-beautify":
     c:
       configPath: "C:\\Users\\hakatashi\\dotfiles\\.uncrustify.cfg"
@@ -90,6 +93,17 @@
       "ide-typescript"
       "minimap"
       "node-debugger"
+      "atom-ide-ui"
+      "browser-plus"
+      "atom-ide-debugger"
+      "teletype"
+      "pigments"
+      "ide-rust"
+      "goto-definition"
+      "atomic-chrome"
+      "docblockr"
+      "api-docs"
+      "markdown-scroll-sync"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -153,7 +167,15 @@
       "dockerlint"
     ]
     statusBar: "Show error if the cursor is in range"
-  "linter-eslint": {}
+  "linter-eslint":
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
@@ -163,6 +185,7 @@
   "linter-tslint": {}
   "linter-ui-default":
     panelHeight: 72
+    showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   minimap:
