@@ -50,4 +50,4 @@ doskey ifconfig=ipconfig $*
 doskey rawrec=rec -t raw -b 16 -c 1 -e s -r 24000 - $*
 doskey rawplay=play -t raw -b 16 -c 1 -e s -r 24000 - $*
 
-doskey d=cmd /C "yarn webpack && git add . && git commit -m ""Checkpoint commit to deploy for TSG LIVE! viewers"" && git push"
+doskey d=cmd /C "npx webpack && git add . && git commit -m ""Checkpoint commit to deploy for TSG LIVE! viewers"" && git push"
