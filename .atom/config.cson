@@ -64,6 +64,9 @@
       source: [
         "[object Object]"
       ]
+      "source.java": [
+        "jad"
+      ]
       "source.json5": [
         ".babelrc"
       ]
@@ -83,9 +86,7 @@
       "nuclide"
       "editor-background"
       "linter-js-standard"
-      "atom-typescript"
       "linter-tslint"
-      "remote-sync"
       "language-gfm"
       "language-review"
       "atom-html-preview"
@@ -104,6 +105,7 @@
       "docblockr"
       "api-docs"
       "markdown-scroll-sync"
+      "remote-sync"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -160,6 +162,8 @@
   "keyboard-localization":
     useKeyboardLayout: "ja_JP"
   "language-review": {}
+  "lcov-info":
+    highlightType: "gutter"
   linter:
     disabledProviders: [
       "RuboCop"
@@ -204,6 +208,10 @@
   "prettier-atom":
     formatOnSaveOptions: {}
     useEslint: true
+  "remote-atom":
+    keep_alive: true
+    launch_at_startup: true
+    port: 52872
   "remote-sync": {}
   "status-bar": {}
   tabs:
@@ -282,6 +290,7 @@
 ".js.source":
   editor:
     preferredLineLength: 100
+    tabLength: 2
 ".litcoffee.source":
   editor:
     preferredLineLength: 100
