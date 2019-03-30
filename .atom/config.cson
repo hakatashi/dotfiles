@@ -56,7 +56,7 @@
     lastUpdateTimestamp: 1504593497944
   "base16-syntax":
     matchUserInterfaceTheme: false
-    scheme: "Darktooth"
+    scheme: "Colors"
   "browser-plus": {}
   core:
     autoHideMenuBar: true
@@ -99,7 +99,6 @@
       "atom-ide-debugger"
       "teletype"
       "pigments"
-      "ide-rust"
       "goto-definition"
       "atomic-chrome"
       "docblockr"
@@ -314,6 +313,9 @@
 ".ruby.source":
   editor:
     tabLength: 2
+".rust.source":
+  editor:
+    preferredLineLength: 99
 ".source.ts":
   editor:
     preferredLineLength: 100
