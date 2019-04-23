@@ -58,6 +58,9 @@
     matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
+  "copy-with-style":
+    preset1:
+      font_family: "Ricty Diminished with Fira Code"
   core:
     autoHideMenuBar: true
     customFileTypes:
@@ -119,6 +122,7 @@
   docblockr: {}
   editor:
     fontFamily: "Ricty Diminished with Fira Code"
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -188,7 +192,6 @@
   "linter-tslint": {}
   "linter-ui-default":
     panelHeight: 72
-    showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   minimap:
