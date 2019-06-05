@@ -16,6 +16,7 @@ set showmatch
 set incsearch
 set smartcase
 set tabstop=4
+set nomodeline
 set autoindent
 set ignorecase
 set history=50
