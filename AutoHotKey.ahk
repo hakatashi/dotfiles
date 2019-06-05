@@ -94,7 +94,7 @@ RCtrl::
 ; My laptop keyboard has been fixed :)
 sc07b::Alt
 
-sc079::-
+sc079::AppsKey
 sc070::^
 
 RAlt::\
