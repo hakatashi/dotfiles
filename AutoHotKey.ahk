@@ -65,7 +65,7 @@ ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int",
 
 ^SPACE::  Winset, Alwaysontop, , A
 
-#If !WinActive("ahk_class Chrome_WidgetWin_1")
+#If !WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive("ahk_exe soffice.bin")
 ^+v::send +{Insert}
 #If
 
