@@ -157,6 +157,8 @@
     lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
+  "ide-rust":
+    rlsToolchain: "nightly-2019-06-02"
   "ide-typescript": {}
   "japanese-wrap":
     characterWidth: {}
@@ -192,6 +194,7 @@
   "linter-tslint": {}
   "linter-ui-default":
     panelHeight: 72
+    showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
   minimap:
