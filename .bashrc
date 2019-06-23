@@ -220,6 +220,11 @@ if [ -d "/usr/local/heroku/bin" ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
 
+# Setup Go
+if [ -d "/usr/local/go/bin" ]; then
+    export PATH="/usr/local/go/bin:$PATH"
+fi
+
 # Setup Promptline
 if [ -s "$HOME/.shell_prompt.sh" ]; then
     . "$HOME/.shell_prompt.sh"
