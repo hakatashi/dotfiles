@@ -5,3 +5,4 @@
 ::
 
 set CYGROOT=C:\tools\cygwin
+set "PROMPT=$P$_$$ "

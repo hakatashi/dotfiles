@@ -5,6 +5,9 @@
     softWrap: true
   "activate-power-mode":
     autoToggle: false
+    plugins:
+      playAudio: true
+      screenShake: true
   "atom-beautify":
     c:
       configPath: "C:\\Users\\hakatashi\\dotfiles\\.uncrustify.cfg"
@@ -23,11 +26,14 @@
     js:
       indent_with_tabs: true
       jslint_happy: true
+    python:
+      default_beautifier: "yapf"
+      formatter: "yapf"
   "atom-ide-ui":
     "atom-ide-diagnostics-ui":
       showDiagnosticTraces: true
     use:
-      "atom-ide-diagnostics-ui": false
+      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors:
       abaseColor: "#ffa726"
@@ -52,12 +58,17 @@
     matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
+  "copy-with-style":
+    preset1:
+      font_family: "Ricty Diminished with Fira Code"
   core:
     autoHideMenuBar: true
-    closeDeletedFileTabs: true
     customFileTypes:
       source: [
         "[object Object]"
+      ]
+      "source.java": [
+        "jad"
       ]
       "source.json5": [
         ".babelrc"
@@ -78,13 +89,25 @@
       "nuclide"
       "editor-background"
       "linter-js-standard"
-      "atom-typescript"
       "linter-tslint"
-      "remote-sync"
       "language-gfm"
       "language-review"
       "atom-html-preview"
       "git-plus"
+      "ide-typescript"
+      "minimap"
+      "node-debugger"
+      "atom-ide-ui"
+      "browser-plus"
+      "atom-ide-debugger"
+      "teletype"
+      "pigments"
+      "goto-definition"
+      "atomic-chrome"
+      "docblockr"
+      "api-docs"
+      "markdown-scroll-sync"
+      "remote-sync"
     ]
     packagesWithKeymapsDisabled: [
       "zentabs"
@@ -92,12 +115,14 @@
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
     telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
+      "one-dark-ui"
       "base16-syntax"
     ]
+    uriHandlerRegistration: "always"
   docblockr: {}
   editor:
-    fontFamily: "Ricty Diminished"
+    fontFamily: "Ricty Diminished with Fira Code"
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
@@ -132,6 +157,8 @@
     lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
+  "ide-rust":
+    rlsToolchain: "nightly-2019-06-02"
   "ide-typescript": {}
   "japanese-wrap":
     characterWidth: {}
@@ -140,13 +167,24 @@
   "keyboard-localization":
     useKeyboardLayout: "ja_JP"
   "language-review": {}
+  "lcov-info":
+    highlightType: "gutter"
   linter:
     disabledProviders: [
       "RuboCop"
+      "JSHint"
+      "dockerlint"
     ]
     statusBar: "Show error if the cursor is in range"
   "linter-eslint":
-    fixOnSave: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
@@ -155,7 +193,7 @@
     linterTimeout: 30000
   "linter-tslint": {}
   "linter-ui-default":
-    panelHeight: 143
+    panelHeight: 72
     showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
@@ -172,9 +210,18 @@
     style: {}
     toggles:
       autoClose: true
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    useEslint: true
+  "remote-atom":
+    keep_alive: true
+    launch_at_startup: true
+    port: 52872
   "remote-sync": {}
+  "status-bar": {}
   tabs:
     enableVcsColoring: true
+  teletype: {}
   "terminal-plus":
     core: {}
     toggles:
@@ -193,6 +240,8 @@
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
   zentabs:
     maximumOpenedTabs: 6
     neverCloseDirty: true
@@ -220,6 +269,9 @@
 ".diff.source":
   editor:
     preferredLineLength: 100
+".gemfile.ruby.source":
+  editor:
+    tabLength: 2
 ".html.js.text":
   editor:
     preferredLineLength: 100
@@ -243,6 +295,7 @@
 ".js.source":
   editor:
     preferredLineLength: 100
+    tabLength: 2
 ".litcoffee.source":
   editor:
     preferredLineLength: 100
@@ -252,6 +305,10 @@
 ".out.txt":
   whitespace:
     ensureSingleTrailingNewline: false
+".pug.source":
+  editor:
+    tabLength: 2
+    tabType: "soft"
 ".pyjade.source":
   editor:
     preferredLineLength: 100
@@ -259,6 +316,12 @@
 ".review.source":
   editor:
     preferredLineLength: 100
+".ruby.source":
+  editor:
+    tabLength: 2
+".rust.source":
+  editor:
+    preferredLineLength: 99
 ".source.ts":
   editor:
     preferredLineLength: 100
@@ -269,6 +332,7 @@
   editor:
     preferredLineLength: 100
     softWrap: true
+    tabLength: 2
 ".text.xml":
   editor:
     preferredLineLength: 100
