@@ -148,6 +148,9 @@
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "git-plus":
     general:
       _analyticsUserId: "865a8777-6d01-45e6-9f7f-7f93aaa3dbf1"
