@@ -789,3 +789,15 @@ cd	←
 ch	↓
 ct	↑
 cn	→
+cra	ぁ
+cri	ぃ
+cru	ぅ
+cre	ぇ
+cro	ぉ
+crva	ゃ
+crvu	ゅ
+crvo	ょ
+crca	ヵ
+crce	ヶ
+crwa	ゎ
+crtu	っ
