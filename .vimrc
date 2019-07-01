@@ -225,7 +225,7 @@ nmap <silent> <Up> gk
 nmap <silent> j gj
 nmap <silent> k gk
 
-source $VIMRUNTIME/mswin.vim
+" source $VIMRUNTIME/mswin.vim
 
 let g:neocomplcache_enable_at_startup = 1
 let g:airline_section_a = airline#section#create(['mode','','branch'])
