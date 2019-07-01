@@ -177,6 +177,7 @@
       "RuboCop"
       "JSHint"
       "dockerlint"
+      "Ruby"
     ]
     statusBar: "Show error if the cursor is in range"
   "linter-eslint":
