@@ -1,0 +1,9 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Base16 Dark Colors",
+    "editor.renderWhitespace": "none",
+    "vsicons.dontShowNewVersionMessage": true
+}
