@@ -34,6 +34,7 @@ doskey nr=npm run $*
 doskey dm=docker-machine $*
 doskey dc=docker-compose $*
 doskey a=atom . $*
+doskey v=code-insiders . $*
 
 doskey weather=curl wttr.in/$1
 
