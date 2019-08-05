@@ -5,5 +5,9 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Base16 Dark Colors",
     "editor.renderWhitespace": "none",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontFamily": "'Ricty Diminished with Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 13,
+    "window.zoomLevel": 0
 }
