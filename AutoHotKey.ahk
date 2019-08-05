@@ -92,9 +92,9 @@ RCtrl::
 #if
 
 ; My laptop keyboard has been fixed :)
-sc07b::Alt
+sc07b::Space
 
-sc079::AppsKey
+sc079::Space
 sc070::^
 
 RAlt::\

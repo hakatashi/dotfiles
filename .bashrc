@@ -120,6 +120,8 @@ alias befs='bundle exec foreman start'
 alias nr='npm run'
 alias dm='docker-machine'
 alias dc='docker-compose'
+alias a='atom .'
+alias v='code-insiders .'
 
 alias weather='curl wttr.in'
 
