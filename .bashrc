@@ -126,6 +126,7 @@ alias weather='curl wttr.in'
 # I'm in UNIX now
 alias where=which
 alias ipconfig=ifconfig
+alias e='open .'
 
 alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
 alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
