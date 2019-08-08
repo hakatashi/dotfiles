@@ -1,0 +1,15 @@
+span.thumb {
+    width: auto;
+    height: 200px;
+    margin: 5px;
+}
+
+span.thumb img {
+    height: 200px;
+}
+
+.content > div:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
