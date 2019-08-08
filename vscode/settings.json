@@ -4,6 +4,10 @@
     "editor.formatOnPaste": true,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Base16 Dark Colors",
-    "editor.renderWhitespace": "none",
-    "vsicons.dontShowNewVersionMessage": true
+    "editor.renderWhitespace": "boundary",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.renderControlCharacters": true,
+    "editor.fontFamily": "Ricty Diminished with Fira Code",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2
 }
