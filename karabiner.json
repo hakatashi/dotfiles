@@ -24,6 +24,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -45,6 +48,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -66,6 +72,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -87,6 +96,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -108,6 +120,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -129,6 +144,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -144,54 +162,15 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+D=BS",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
-                                "description": "Fn+D=BS",
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
                                 "description": "Fn+U=PageUp",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -213,6 +192,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -234,6 +216,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -255,6 +240,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -276,6 +264,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
@@ -297,6 +288,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
