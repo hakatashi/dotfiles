@@ -29,8 +29,8 @@
             user = 'OkXgen';
         } else if (user === 'pookemon') {
             user = 'Pokemon';
-        } else if (user === 'hisakatafuji') {
-            user = 'Oura M. (@domperor，@ut_tex_club）';
+        } else if (user === 'hf_domperor') {
+            user = 'Oura M. (domperor/UT-TeX)';
         } else if (user === 'yuu.miu.0925') {
             user = 'うら';
         }
