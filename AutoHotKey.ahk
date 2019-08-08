@@ -109,7 +109,7 @@ SetTitleMatchMode, 2
 ;     QWERTY-Dvorak Toggle using ScrollLock key
 state := 1 ;
 
-#If state=1 and not GetKeyState("Ctrl", "P")
+#If state=1
    #HotkeyInterval 1000000000
    #MaxHotkeysPerInterval 9999999999999
    -::[
