@@ -32,8 +32,8 @@ const decrypt = (entry, key) => {
             user = 'naan998244353';
         } else if (user === 'jp3bgy') {
             user = 'JP3BGY';
-        } else if (user === 'xzy7.naoki.ishii2000') {
-            user = '昆布';
+        } else if ((decrypted = decrypt('7ab95c063c0486536465c60b27e8339001ce21c88ea5933879654729f680a12148c9276e', user))) {
+            user = decrypted;
         } else if ((decrypted = decrypt('5494c443523e125f72cc06ca470348a742a79f2345047b5a017e01cf7d747623', user))) {
             user = decrypted;
         } else if (user === 'pookemon') {
