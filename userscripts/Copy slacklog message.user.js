@@ -6,7 +6,16 @@
 // @author       You
 // @match        https://slack-log.tsg.ne.jp/*
 // @grant        none
+// @require      https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js
 // ==/UserScript==
+
+const decrypt = (entry, key) => {
+    const data = aesjs.utils.hex.toBytes(entry);
+    const aes = new aesjs.ModeOfOperation.ctr(key);
+    const bytes = aes.decrypt(data);
+    const text = aesjs.utils.utf8.fromBytes(bytes);
+    return text.match(/^[\x00-\x7F]+$/) ? text : null;
+};
 
 (function() {
     'use strict';
@@ -25,8 +34,8 @@
             user = 'JP3BGY';
         } else if (user === 'xzy7.naoki.ishii2000') {
             user = '昆布';
-        } else if (user === 'kengo-phoenix') {
-            user = 'OkXgen';
+        } else if ((decrypted = decrypt('5494c443523e125f72cc06ca470348a742a79f2345047b5a017e01cf7d747623', user))) {
+            user = decrypted;
         } else if (user === 'pookemon') {
             user = 'Pokemon';
         } else if (user === 'hisakatafuji') {
