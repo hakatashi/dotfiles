@@ -234,5 +234,8 @@ if [ -s "$HOME/.shell_prompt.sh" ]; then
     . "$HOME/.shell_prompt.sh"
 fi
 
-export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
+if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
+    export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
+fi
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
