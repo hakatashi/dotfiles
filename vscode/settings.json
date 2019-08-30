@@ -11,5 +11,14 @@
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.lineHeight": 13,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    "eslint.autoFixOnSave": true
 }
