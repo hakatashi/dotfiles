@@ -1,9 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-SCRIPT_PATH="$(readlink -m "$BASH_SOURCE")"
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -187,27 +181,31 @@ if [ -d "$HOME/.rbenv" ]; then
     eval "$(rbenv init -)"
 fi
 
-# pyenv
-if [ -d "$HOME/.pyenv" ]; then
-  export PATH="/home/hakatashi/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
-# Setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use node
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Setup bin directory as path of script
-export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
-
 # Setup pyenv
 if [ -d "$HOME/.pyenv" ]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
+    if [ -d "$PYENV_ROOT/plugins/pyenv-virtualenv" ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
+
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+    nvm use node
+fi
+
+# Setup nvm bash completion
+if [ -s "$NVM_DIR/bash_completion" ]; then
+    . "$NVM_DIR/bash_completion"
+fi
+
+# Setup bin directory as path of script
+SCRIPT_PATH="$(readlink "$BASH_SOURCE")"
+export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
 
 # Setup srilm
 if [ -d "$HOME/srilm-dir/bin/i686-m64" ]; then
@@ -234,8 +232,7 @@ if [ -s "$HOME/.shell_prompt.sh" ]; then
     . "$HOME/.shell_prompt.sh"
 fi
 
+# Setup Docker Machine for Windows
 if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
     export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
 fi
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
