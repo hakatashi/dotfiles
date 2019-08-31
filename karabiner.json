@@ -162,7 +162,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+U=PageUp",
+                                "description": "Fn+U=PageDown",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
@@ -176,7 +176,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_up"
+                                        "key_code": "page_down"
                                     }
                                 ],
                                 "type": "basic"
@@ -186,7 +186,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+I=PageDown",
+                                "description": "Fn+I=PageUp",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
@@ -200,7 +200,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_down"
+                                        "key_code": "page_up"
                                     }
                                 ],
                                 "type": "basic"
