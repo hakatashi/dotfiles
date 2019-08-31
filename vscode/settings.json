@@ -11,5 +11,14 @@
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.lineHeight": 13,
-    "window.zoomLevel": 0
+    "window.zoomLevel": -1,
+    "code-runner.saveFileBeforeRun": true,
+    "zentabs.applyLimitFor": "editorGroup",
+    "zentabs.maximumOpenedTabs": 6,
+    "crystal-lang.bashOnWindows": true,
+    "crystal-lang.completion": true,
+    "crystal-lang.hover": true,
+    "crystal-lang.implementations": true,
+    "crystal-lang.problems": "build",
+    "crystal-lang.compiler": "/usr/bin/crystal"
 }
