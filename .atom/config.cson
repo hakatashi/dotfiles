@@ -1,50 +1,80 @@
 "*":
+  Zen:
+    fullscreen: false
+    gutter: true
+    softWrap: true
   "activate-power-mode":
     autoToggle: false
+    plugins:
+      playAudio: true
+      screenShake: true
   "atom-beautify":
-    _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    c:
+      configPath: "C:\\Users\\hakatashi\\dotfiles\\.uncrustify.cfg"
     css:
       convert_quotes: "single"
+      default_beautifier: "Pretty Diff"
       indent_char: "\t"
       indent_size: 4
       newline_between_rules: true
       no_lead_zero: true
-    css_newline_between_rules: true
-    css_preserve_newlines: true
+      preserve_newlines: true
+    erb:
+      default_beautifier: "HTML Beautifier"
     general:
-      _analyticsUserId: "61cd97b7-45cf-4d87-abdf-f4ef2e29957f"
-    js_indent_with_tabs: true
-    js_jslint_happy: true
-    language_css_default_beautifier: "Pretty Diff"
-    language_erb_default_beautifier: "HTML Beautifier"
+      _analyticsUserId: "b8164163-310c-4e9d-aa9c-723bda0250e2"
+    js:
+      indent_with_tabs: true
+      jslint_happy: true
+    python:
+      default_beautifier: "yapf"
+      formatter: "yapf"
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      showDiagnosticTraces: true
+    use:
+      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors:
-      abaseColor:
-        red: 239
-        green: 83
-        blue: 80
-        alpha: 1
-      accentColor:
-        red: 89
-        green: 252
-        blue: 255
-        alpha: 1
-      predefinedColor: "Red"
+      abaseColor: "#ffa726"
+      accentColor: "#9f6918"
+      predefinedColor: "Orange"
     fonts:
       fontSize: 14
-    ui: {}
+    tabs: {}
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "atom-slide-show":
+    imageDir: "C:/Users/hakatashi/Documents/GitHub/pixivwall/images"
+    usePackageStyle: true
   "atom-typescript": {}
   "autocomplete-plus":
     autoActivationDelay: 300
     confirmCompletion: "enter"
+  "autoupdate-packages":
+    lastUpdateTimestamp: 1504593497944
   "base16-syntax":
     matchUserInterfaceTheme: false
     scheme: "Colors"
   "browser-plus": {}
+  "copy-with-style":
+    preset1:
+      font_family: "Ricty Diminished with Fira Code"
   core:
+    autoHideMenuBar: true
     customFileTypes:
       source: [
         "[object Object]"
+      ]
+      "source.java": [
+        "jad"
+      ]
+      "source.json5": [
+        ".babelrc"
+      ]
+      "source.review": [
+        "re"
       ]
       "source.xml": [
         "ttx"
@@ -55,30 +85,48 @@
       "grunt-runner"
       "video-player"
       "sort-lines"
-      "ide-haskell"
-      "haskell-ghc-mod"
-      "language-livescript"
-      "linter-htmlhint"
       "nuclide-ocaml"
       "nuclide"
       "editor-background"
-      "language-review"
-      "editorconfig"
-      "linter-jshint"
       "linter-js-standard"
+      "linter-tslint"
+      "language-gfm"
+      "language-review"
+      "atom-html-preview"
+      "git-plus"
+      "ide-typescript"
+      "minimap"
+      "node-debugger"
+      "atom-ide-ui"
+      "browser-plus"
+      "atom-ide-debugger"
+      "teletype"
+      "pigments"
+      "goto-definition"
+      "atomic-chrome"
+      "docblockr"
+      "api-docs"
+      "markdown-scroll-sync"
+      "remote-sync"
+    ]
+    packagesWithKeymapsDisabled: [
+      "zentabs"
     ]
     projectHome: "C:\\Users\\Hakatashi\\Documents\\GitHub"
+    telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
+      "one-dark-ui"
       "base16-syntax"
     ]
+    uriHandlerRegistration: "always"
   docblockr: {}
   editor:
-    fontFamily: "Ricty"
-    fontSize: 17
+    fontFamily: "Ricty Diminished with Fira Code"
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.2
     preferredLineLength: 100
+    showIndentGuide: true
     showInvisibles: true
     softTabs: false
     tabLength: 4
@@ -100,11 +148,21 @@
     userId: "b91882bb-8ab4-faf7-b7e4-fcec3fc89016"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "git-plus": {}
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
+  "git-plus":
+    general:
+      _analyticsUserId: "865a8777-6d01-45e6-9f7f-7f93aaa3dbf1"
   "haskell-ghc-mod": {}
   "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
     onlyHighlightWholeWords: true
   "ide-haskell": {}
+  "ide-rust":
+    rlsToolchain: "nightly-2019-06-02"
+  "ide-typescript": {}
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule:
@@ -112,45 +170,112 @@
   "keyboard-localization":
     useKeyboardLayout: "ja_JP"
   "language-review": {}
+  "lcov-info":
+    highlightType: "gutter"
   linter:
-    showErrorPanel: false
+    disabledProviders: [
+      "RuboCop"
+      "JSHint"
+      "dockerlint"
+      "Ruby"
+    ]
     statusBar: "Show error if the cursor is in range"
+  "linter-eslint":
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
   "linter-js-standard": {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+    linterTimeout: 30000
   "linter-tslint": {}
+  "linter-ui-default":
+    panelHeight: 72
+    showPanel: true
   metrics:
     userId: "326cc6fac878282b4d7683883bd82d1c659ce21f"
+  minimap:
+    absoluteMode: true
   nuclide:
     "nuclide-home":
       showHome: false
-  pigments:
-    markerType: "dot"
+  "one-dark-ui": {}
+  pigments: {}
+  "platformio-ide-terminal":
+    core:
+      shell: "C:\\WINDOWS\\System32\\cmd.exe"
+    style: {}
+    toggles:
+      autoClose: true
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    useEslint: true
+  "remote-atom":
+    keep_alive: true
+    launch_at_startup: true
+    port: 52872
   "remote-sync": {}
+  "status-bar": {}
   tabs:
     enableVcsColoring: true
+  teletype: {}
+  "terminal-plus":
+    core: {}
+    toggles:
+      autoClose: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: false
+  "vim-mode-plus":
+    highlightSearch: true
+    incrementalSearch: true
+    useClipboardAsDefaultRegister: false
+    useSmartcaseForSearch: true
   "vim-surround": {}
   "webbox-color":
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+  zentabs:
+    maximumOpenedTabs: 6
+    neverCloseDirty: true
+    neverCloseNew: true
+    neverCloseUnsaved: true
 ".asm.source.x86":
   editor:
     preferredLineLength: 100
 ".basic.html.text":
   editor:
     preferredLineLength: 100
+    tabLength: 4
 ".coffee.source":
   editor:
     preferredLineLength: 100
     tabLength: 2
+".css.postcss.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".css.postcss.source.sugarss":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
 ".diff.source":
   editor:
     preferredLineLength: 100
+".gemfile.ruby.source":
+  editor:
+    tabLength: 2
 ".html.js.text":
   editor:
     preferredLineLength: 100
@@ -160,6 +285,10 @@
 ".html.smarty.text":
   editor:
     preferredLineLength: 100
+".html.text.vue":
+  editor:
+    tabLength: 2
+    tabType: "hard"
 ".ini.source":
   editor:
     preferredLineLength: 100
@@ -174,17 +303,31 @@
 ".js.source":
   editor:
     preferredLineLength: 100
+    tabLength: 2
 ".litcoffee.source":
   editor:
     preferredLineLength: 100
 ".livescript.source":
   editor:
     preferredLineLength: 100
+".out.txt":
+  whitespace:
+    ensureSingleTrailingNewline: false
+".pug.source":
+  editor:
+    tabLength: 2
+    tabType: "soft"
 ".pyjade.source":
   editor:
     preferredLineLength: 100
     tabLength: 4
 ".review.source":
+  editor:
+    preferredLineLength: 100
+".ruby.source":
+  editor:
+    tabLength: 2
+".rust.source":
   editor:
     preferredLineLength: 100
 ".source.ts":
@@ -196,6 +339,8 @@
 ".source.yaml":
   editor:
     preferredLineLength: 100
+    softWrap: true
+    tabLength: 2
 ".text.xml":
   editor:
     preferredLineLength: 100

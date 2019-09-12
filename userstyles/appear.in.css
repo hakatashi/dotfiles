@@ -1,0 +1,23 @@
+.pro-room .video-space {
+    background: #0F0;
+}
+
+.video-space-header, .bottom-left-button-group, .chat-open-button, invite-placeholder-box {
+    visibility: hidden;
+}
+
+video.camera, .VideoView-userAvatar, .top-left-corner + .VideoView-bottomLeftStatus {
+    display: none;
+}
+
+web-rtc-video, .video-box {
+    background: #0F0;
+}
+
+.video-space::before {
+    background: none;
+}
+
+#beacon-container {
+    display: none;
+}

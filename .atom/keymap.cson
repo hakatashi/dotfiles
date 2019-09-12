@@ -4,12 +4,15 @@
   'ctrl-shift-S': 'window:save-all'
   'ctrl-shift-alt-S': 'core:save-as'
   'ctrl-tab': 'pane:show-next-item'
+  'ctrl-tab ^ctrl': 'unset!'
   'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
 '.autocomplete-plus input.hidden-input':
   'enter': 'autocomplete-plus:confirm'
 '.editor:not(.mini)':
   'shift-tab': 'snippets:expand'
-'atom-text-editor.vim-mode':
+  'shift-ctrl-h': 'hex:view'
+'atom-text-editor.vim-mode-plus':
   'ctrl-f': 'unset!'
   'ctrl-c': 'unset!'
   'ctrl-x': 'unset!'
@@ -17,7 +20,23 @@
   'ctrl-t': 'unset!'
   'ctrl-r': 'unset!'
   'ctrl-,': 'unset!'
-'atom-text-editor.vim-mode:not(.insert-mode)':
+  'alt-up': 'window:focus-pane-above'
+  'alt-down': 'window:focus-pane-below'
+  'alt-right': 'window:focus-pane-on-right'
+  'alt-left': 'window:focus-pane-on-left'
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'y s': 'vim-mode-plus:surround'
+  'd s': 'vim-mode-plus:delete-surround-any-pair'
+  'd u': 'vim-mode-plus:delete-surround'
+  'c s': 'vim-mode-plus:change-surround-any-pair'
+  'c u': 'vim-mode-plus:change-surround'
+'atom-text-editor.vim-mode-plus.visual-mode:not(.insert-mode)':
+  'S': 'vim-mode-plus:surround'
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'up': 'vim-mode-plus:move-up-screen'
+  'k': 'vim-mode-plus:move-up-screen'
+  'down': 'vim-mode-plus:move-down-screen'
+  'j': 'vim-mode-plus:move-down-screen'
   'ctrl-f': 'unset!'
   'ctrl-c': 'unset!'
   'ctrl-x': 'unset!'
@@ -25,3 +44,14 @@
   'ctrl-t': 'unset!'
   'ctrl-r': 'unset!'
   'ctrl-,': 'unset!'
+  'ctrl-j': 'unset!'
+'atom-workspace':
+  'ctrl-i':     'cursor-history:next'
+  'ctrl-p':     'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'
+  'ctrl-j': 'fuzzy-finder:toggle-file-finder'
+'.platform-win32 atom-workspace':
+  'ctrl-shift-Z': 'unset!'
+'.platform-win32 atom-workspace atom-text-editor:not(.mini)':
+  'ctrl-shift-Z': 'unset!'

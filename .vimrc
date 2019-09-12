@@ -16,6 +16,7 @@ set showmatch
 set incsearch
 set smartcase
 set tabstop=4
+set nomodeline
 set autoindent
 set ignorecase
 set history=50
@@ -62,13 +63,14 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'digitaltoad/vim-pug'
+NeoBundle 'deton/jasegment.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
-NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'guileen/vim-node-dict'
 NeoBundle 'vim-scripts/nginx.vim'
+NeoBundle 'edkolev/promptline.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'chriskempson/base16-vim'
@@ -78,6 +80,7 @@ NeoBundle 'markcornick/vim-vagrant'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vim-scripts/smarty-syntax'
+NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'shawncplus/phpcomplete.vim'
 NeoBundle 'vim-scripts/po.vim--Jelenak'
 NeoBundle 'vim-scripts/AfterColors.vim'
@@ -222,21 +225,31 @@ nmap <silent> <Up> gk
 nmap <silent> j gj
 nmap <silent> k gk
 
-source $VIMRUNTIME/mswin.vim
+" source $VIMRUNTIME/mswin.vim
 
 let g:neocomplcache_enable_at_startup = 1
+let g:airline_section_a = airline#section#create(['mode','','branch'])
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_left_sep = '>'
+let g:airline_left_alt_sep = '>'
+let g:airline_right_sep = '<'
+let g:airline_right_alt_sep = '<'
+let g:airline_symbols.branch = 'b'
+let g:airline_symbols.readonly = 'r'
+let g:airline_symbols.linenr = 'l'
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#extensions#tabline#left_alt_sep = '>'
+let g:airline_symbols.paste = 'p'
+let g:airline_section_b = airline#section#create(['U+%04B'])
 let g:airline_powerline_fonts = 1
 
 " Unbind Shift-k and Shift-j, which are very often to misstype
 nnoremap J <Nop>
 nnoremap K <Nop>
 
-" activate CamelCaseMotion
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
+nmap <Home> ^
+
+let g:jasegment#highlight = 2

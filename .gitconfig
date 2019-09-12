@@ -28,6 +28,8 @@
 	chekcout = checkout
 	comit = commit
 	commti = commit
+	cl = clone --recurse-submodules -j8
+	shoe = show
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -35,3 +37,8 @@
 [url "git@github.com:"]
 	pushInsteadOf = git://github.com/
 	pushInsteadOf = https://github.com/
+[url "git@gist.github.com:"]
+	pushInsteadOf = git://gist.github.com/
+	pushInsteadOf = https://gist.github.com/
+[credential]
+	helper = wincred

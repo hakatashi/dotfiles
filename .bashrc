@@ -1,9 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-SCRIPT_PATH="$(readlink -m "$BASH_SOURCE")"
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -21,6 +15,9 @@ shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Set tab size
+tabs 4
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -106,14 +103,29 @@ alias push='git push origin HEAD'
 alias phpunit='\phpunit --colors'
 alias less='\less -R'
 
+alias wresume='wget --content-disposition --continue --retry-connrefused --tries=0 --timeout=5'
+
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias f='fuck'
 
 alias be='bundle exec'
 alias bers='bundle exec rails server'
 alias befs='bundle exec foreman start'
+alias nr='npm run'
+alias dm='docker-machine'
+alias dc='docker-compose'
+alias a='atom .'
+alias v='code-insiders .'
 
 alias weather='curl wttr.in'
+
+# I'm in UNIX now
+alias where=which
+alias ipconfig=ifconfig
+alias e='open .'
+
+alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
+alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -169,19 +181,61 @@ if [ -d "$HOME/.rbenv" ]; then
     eval "$(rbenv init -)"
 fi
 
-# pyenv
+# Setup pyenv
 if [ -d "$HOME/.pyenv" ]; then
-  export PATH="/home/hakatashi/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    if [ -d "$PYENV_ROOT/plugins/pyenv-virtualenv" ]; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 # Setup nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use node
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+    nvm use node
+fi
+
+# Setup nvm bash completion
+if [ -s "$NVM_DIR/bash_completion" ]; then
+    . "$NVM_DIR/bash_completion"
+fi
 
 # Setup bin directory as path of script
+SCRIPT_PATH="$(readlink "$BASH_SOURCE")"
 export PATH="$(dirname "$SCRIPT_PATH")/bin:$PATH"
+
+# Setup srilm
+if [ -d "$HOME/srilm-dir/bin/i686-m64" ]; then
+    export PATH="~/srilm-dir/bin/i686-m64:$PATH"
+fi
+
+# Setup torch
+if [ -s "$HOME/torch/install/bin/torch-activate" ]; then
+    . ~/torch/install/bin/torch-activate
+fi
+
+# Setup Heroku Toolbelt
+if [ -d "/usr/local/heroku/bin" ]; then
+    export PATH="/usr/local/heroku/bin:$PATH"
+fi
+
+# Setup Go
+if [ -d "/usr/local/go/bin" ]; then
+    export PATH="/usr/local/go/bin:$PATH"
+fi
+
+# Setup Promptline
+if [ -s "$HOME/.shell_prompt.sh" ]; then
+    . "$HOME/.shell_prompt.sh"
+fi
+
+# Setup Docker Machine for Windows
+if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
+    export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

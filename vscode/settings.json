@@ -1,0 +1,37 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Base16 Dark Colors",
+    "editor.renderWhitespace": "boundary",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.renderControlCharacters": true,
+    "editor.fontFamily": "Ricty Diminished with Fira Code",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.lineHeight": 13,
+    "code-runner.saveFileBeforeRun": true,
+    "zentabs.applyLimitFor": "editorGroup",
+    "zentabs.maximumOpenedTabs": 6,
+    "crystal-lang.bashOnWindows": true,
+    "crystal-lang.completion": true,
+    "crystal-lang.hover": true,
+    "crystal-lang.implementations": true,
+    "crystal-lang.problems": "build",
+    "crystal-lang.compiler": "/usr/bin/crystal",
+    "window.zoomLevel": 0,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    "eslint.autoFixOnSave": true
+}
