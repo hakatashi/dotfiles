@@ -48,7 +48,7 @@
         "command": "workbench.action.previousEditor"
     },
     {
-        "key": "alt+cmd+s",
+        "key": "ctrl+shift+alt+s",
         "command": "workbench.action.files.saveAs"
     },
     {
@@ -66,11 +66,19 @@
         "when": "remoteFileDialogVisible"
     },
     {
-        "key": "shift+cmd+s",
+        "key": "ctrl+shift+s",
         "command": "workbench.action.files.saveAll"
     },
     {
         "key": "alt+cmd+s",
         "command": "-workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+alt+shift+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveAs"
     }
 ]
