@@ -48,6 +48,8 @@ doskey Ç…Ç·Å[ÇÒ=yarn $*
 doskey which=where $*
 doskey ifconfig=ipconfig $*
 
+doskey unclip=powershell -Command Get-Clipboard $*
+
 doskey rawrec=rec -t raw -b 16 -c 1 -e s -r 24000 - $*
 doskey rawplay=play -t raw -b 16 -c 1 -e s -r 24000 - $*
 
