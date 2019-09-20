@@ -33,5 +33,7 @@
             "autoFix": true
         }
     ],
-    "eslint.autoFixOnSave": true
+    "eslint.autoFixOnSave": true,
+    "python.insidersChannel": "weekly",
+    "vim.useCtrlKeys": false
 }
