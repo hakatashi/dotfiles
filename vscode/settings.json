@@ -19,8 +19,7 @@
     "crystal-lang.hover": true,
     "crystal-lang.implementations": true,
     "crystal-lang.problems": "build",
-    "crystal-lang.compiler": "/usr/bin/crystal",
-    "window.zoomLevel": 0,
+    "crystal-lang.compiler": "crystal.bat",
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -33,7 +32,8 @@
             "autoFix": true
         }
     ],
-    "eslint.autoFixOnSave": true,
     "python.insidersChannel": "weekly",
-    "vim.useCtrlKeys": false
+    "vim.useCtrlKeys": false,
+    "eslint.autoFixOnSave": true,
+    "window.zoomLevel": 0
 }
