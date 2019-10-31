@@ -28,7 +28,7 @@
 	chekcout = checkout
 	comit = commit
 	commti = commit
-	cl = clone --recurse-submodules -j8
+	clone = clone --recursive --recurse-submodules -j8
 	shoe = show
 [filter "lfs"]
 	clean = git-lfs clean -- %f
