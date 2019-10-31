@@ -15,7 +15,7 @@ Pause::Media_Play_Pause
     i::PgUp
     o::End
     p::Insert
-    `;::vkF4sc029
+    `;::vkF4
 
     m::Send +{F10}
     ,::(
