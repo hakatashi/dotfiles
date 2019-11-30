@@ -13,7 +13,6 @@
     "editor.lineHeight": 13,
     "code-runner.saveFileBeforeRun": true,
     "zentabs.applyLimitFor": "editorGroup",
-    "zentabs.maximumOpenedTabs": 6,
     "crystal-lang.bashOnWindows": true,
     "crystal-lang.completion": true,
     "crystal-lang.hover": true,
@@ -32,8 +31,15 @@
             "autoFix": true
         }
     ],
-    "python.insidersChannel": "weekly",
+    "python.insidersChannel": "off",
     "vim.useCtrlKeys": false,
     "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "files.exclude": {
+        "**/*.meta": true
+    },
+    "zentabs.maximumOpenedTabs": 6,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    }
 }
