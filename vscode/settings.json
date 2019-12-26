@@ -41,5 +41,9 @@
     "zentabs.maximumOpenedTabs": 6,
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
-    }
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "problems.showCurrentInStatus": true
 }
