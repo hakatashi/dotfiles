@@ -10,9 +10,8 @@
 	default = upstream
 	followTags = true
 [alias]
-	#d = diff --color-words --word-diff-regex='\\w+|[\\x21-\\x7F]+|[^[:space:]]' --ignore-space-change
-	d = diff --color-words --word-diff-regex='[$-\\w]+|.' --ignore-space-change
-	dc = diff --color-words --word-diff-regex='[$-\\w]+|.' --ignore-space-change --cached
+	d = diff --color-words --word-diff-regex='[^\\x80-\\xbf][\\x80-\\xbf]*' --ignore-space-change
+	dc = diff --color-words --word-diff-regex='[^\\x80-\\xbf][\\x80-\\xbf]*' --ignore-space-change --cached
 	wdiff = diff --word-diff --ignore-space-change
 	cdiff = diff --cached --ignore-space-change
 	s = status --short --branch --untracked-files=all
@@ -30,10 +29,12 @@
 	commti = commit
 	clone = clone --recursive --recurse-submodules -j8
 	shoe = show
+	pull = pull --recurse-submodules
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [url "git@github.com:"]
 	pushInsteadOf = git://github.com/
 	pushInsteadOf = https://github.com/
