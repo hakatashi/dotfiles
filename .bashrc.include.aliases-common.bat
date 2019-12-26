@@ -18,6 +18,8 @@ doskey ll=ls -alh --color=auto $*
 doskey la=ls -A --color=auto $*
 doskey l=ls -CF --color=auto $*
 
+doskey cd=pushd $*
+
 doskey ..=cd ..
 doskey ...=cd ../..
 doskey ....=cd ../../..
