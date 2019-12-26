@@ -6,8 +6,12 @@ mkdir -p ~/dotfiles.backup
 cd `dirname $0`
 
 for file in $files; do
-  if [ -f "~/$file" ]; do
-    mv ~/$file ~/dotfiles.backup/
-  done
-  ln -s $file ~/.$file
+  if [ -L "$HOME/$file" ]; then
+    continue
+  fi
+  if [ -f "$HOME/$file" ]; then
+    mv $HOME/$file $HOME/dotfiles.backup/
+  fi
+  echo "Installing $file..."
+  ln -s $PWD/$file $HOME/$file
 done
