@@ -49,5 +49,14 @@
     "task.autoDetect": "off",
     "backgroundCover.randomImageFolder": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images",
     "backgroundCover.imagePath": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\random.png",
-    "sync.gist": "bca29129917461a55a190f58da8b7ce1"
+    "sync.gist": "bca29129917461a55a190f58da8b7ce1",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 6,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "window.restoreWindows": "none",
+    "window.newWindowDimensions": "maximized",
+    "window.openFoldersInNewWindow": "off",
+    "window.openWithoutArgumentsInNewWindow": "off"
 }
