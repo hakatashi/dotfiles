@@ -40,6 +40,22 @@
         "command": "-workbench.action.focusRightGroup"
     },
     {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
