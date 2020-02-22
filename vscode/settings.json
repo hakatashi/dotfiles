@@ -34,7 +34,7 @@
     "python.insidersChannel": "off",
     "vim.useCtrlKeys": false,
     "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "files.exclude": {
         "**/*.meta": true
     },
@@ -58,5 +58,9 @@
     "window.restoreWindows": "none",
     "window.newWindowDimensions": "maximized",
     "window.openFoldersInNewWindow": "off",
-    "window.openWithoutArgumentsInNewWindow": "off"
+    "window.openWithoutArgumentsInNewWindow": "off",
+    "files.associations": {
+        "*.sage": "python"
+    },
+    "editor.minimap.enabled": false
 }
