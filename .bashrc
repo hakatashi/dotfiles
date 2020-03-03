@@ -80,7 +80,7 @@ alias nr='npm run'
 alias dm='docker-machine'
 alias dc='docker-compose'
 alias a='atom .'
-alias v='code-insiders .'
+alias v='code-insiders --add .'
 
 alias weather='curl wttr.in'
 
