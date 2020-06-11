@@ -24,6 +24,7 @@ Pause::Media_Play_Pause
     f::Escape
     e::Delete
     d::Backspace
+    v::^@
 
     1::F1
     2::F2
@@ -46,7 +47,7 @@ Pause::Media_Play_Pause
     ; sc07b::
     ; SetTitleMatchMode, 2
     ; WinActivate, Google Chrome ahk_class Chrome_WidgetWin_1
-    ; send ^t
+    ; send ^
     ; SetTitleMatchMode, 1
     ; return
 
@@ -110,55 +111,285 @@ SetTitleMatchMode, 2
 state := 1 ;
 
 #If state=1
-   #HotkeyInterval 1000000000
-   #MaxHotkeysPerInterval 9999999999999
-   -::[
-   ^::]
-   q::'
-   +q::"
-   w::,
-   e::.
-   r::p
-   t::y
-   y::f
-   u::g
-   i::c
-   o::r
-   p::l
-   @::/
-   [::=
-   +[::+
-   ]::\
-   s::o
-   d::e
-   f::u
-   g::i
-   h::d
-   j::h
-   k::t
-   l::n
-   `;::s
-   :::Send -
-   *::Send _
-   z::Send `;
-   +z::Send :
-   x::q
-   c::j
-   v::k
-   b::x
-   n::b
-   ,::w
-   .::v
-   /::z
-   sc029::`
-   +sc029::~
-   +2::Send @
-   +6::Send {^}
-   +7::&
-   +8::*
-   +9::(
-   +0::)
-   RWin::-
-   +RWin::=
-   ^RWin::_
+    #HotkeyInterval 1000000000
+    #MaxHotkeysPerInterval 9999999999999
+    -::[
+    ^::]
+    q::'
+    +q::"
+    w::,
+    e::.
+    r::p
+    t::y
+    y::f
+    u::g
+    i::c
+    o::r
+    p::l
+    @::/
+    [::=
+    +[::+
+    ]::\
+    s::o
+    d::e
+    f::u
+    g::i
+    h::d
+    j::h
+    k::t
+    l::n
+    `;::s
+    :::Send -
+    *::Send _
+    z::Send `;
+    +z::Send :
+    x::q
+    c::j
+    v::k
+    b::x
+    n::b
+    ,::w
+    .::v
+    /::z
+    sc029::`
+    +sc029::~
+    +2::Send @
+    +6::Send {^}
+    +7::&
+    +8::*
+    +9::(
+    +0::)
+    RWin::-
+    +RWin::=
+    ^RWin::_
 #If
+
+;Left::SendInput ��
+;Right::SendInput �E
+;Up::SendInput ��
+;Down::SendInput ��
+
+#A::SetTimer, AutoJam, 20000
+#Q::SetTimer, AutoJam, Off
+
+FoundSuperLive := false
+
+AutoJam:
+global FoundSuperLive
+global Counter
+CoordMode, Pixel, Screen
+CoordMode, Mouse, Screen
+
+WinGetPos, X, Y, W, H, A
+W := W + X
+H := H + Y
+
+Counter++
+if (Mod(Counter, 200) = 0) {
+    Send {F5}
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\event-top.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+20
+    Sleep, 1000
+    MouseClick, left
+    Sleep, 4000
+}
+
+MouseMove, X+160, Y+605
+Sleep, 1000
+MouseClick, left
+Sleep, 4000
+
+MouseMove, X+40, Y+530
+Sleep, 1000
+MouseClick, left
+Sleep, 4000
+
+MouseMove, X+40, Y+415
+Sleep, 1000
+MouseClick, left
+
+if (Mod(Counter, 5) = 0) {
+    Sleep, 4000
+    MouseMove, X+40, Y+320
+    Sleep, 1000
+    MouseClick, left
+}
+
+return
+
+NotFoundCounter := 0
+Counter := 0
+
+AutoOshigoto:
+global NotFoundCounter
+global Counter
+CoordMode, Pixel, Screen
+CoordMode, Mouse, Screen
+
+WinGetPos, X, Y, W, H, A
+W := W + X
+H := H + Y
+
+Counter++
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *20 C:\Users\denjj\dotfiles\temp\button.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+30
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\sutadori.png
+if (ErrorLevel = 0) {
+    if (Mod(Counter, 4) = 0) {
+        MouseMove, FoundX, FoundY+60
+        MouseClick, left
+        Sleep 1000
+        MouseClick, left
+        NotFoundCounter := 0
+    }
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\sutadori-gray.png
+if (ErrorLevel = 0) {
+    if (Mod(Counter, 4) = 0) {
+        MouseMove, FoundX+60, FoundY+60
+        MouseClick, left
+        Sleep 1000
+        MouseClick, left
+        NotFoundCounter := 0
+    }
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\next-area.png
+if (ErrorLevel = 0) {
+    if (Mod(Counter, 4) = 0) {
+        MouseMove, FoundX+20, FoundY+30
+        MouseClick, left
+        NotFoundCounter := 0
+    }
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\skip.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+10
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *120 C:\Users\denjj\dotfiles\temp\start-battle.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+10
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *20 C:\Users\denjj\dotfiles\temp\battle-ready.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY
+    Click WheelDown
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *20 C:\Users\denjj\dotfiles\temp\after-win-1.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY
+    Click WheelDown
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *20 C:\Users\denjj\dotfiles\temp\after-win-2.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY
+    Click WheelDown
+    NotFoundCounter := 0
+    return
+}
+
+NotFoundCounter++
+if (Mod(NotFoundCounter, 3) = 0) {
+    MouseMove, X+230, Y+350
+    MouseClick, left
+}
+
+return
+
+AutoIdolProduce:
+global NotFoundCounter
+global Counter
+CoordMode, Pixel, Screen
+CoordMode, Mouse, Screen
+
+WinGetPos, X, Y, W, H, A
+W := W + X
+H := H + Y
+
+Counter++
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *20 C:\Users\denjj\dotfiles\temp\button.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+30
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\sutadori.png
+if (ErrorLevel = 0) {
+    if (Mod(Counter, 4) = 0) {
+        MouseMove, FoundX, FoundY+60
+        MouseClick, left
+        Sleep 1000
+        MouseClick, left
+        NotFoundCounter := 0
+    }
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\sutadori-gray.png
+if (ErrorLevel = 0) {
+    if (Mod(Counter, 4) = 0) {
+        MouseMove, FoundX+60, FoundY+60
+        MouseClick, left
+        Sleep 1000
+        MouseClick, left
+        NotFoundCounter := 0
+    }
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\communicate.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+30
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+ImageSearch, FoundX, FoundY, %X%, %Y%, %W%, %H%, *100 C:\Users\denjj\dotfiles\temp\communicate3.png
+if (ErrorLevel = 0) {
+    MouseMove, FoundX+20, FoundY+30
+    MouseClick, left
+    NotFoundCounter := 0
+    return
+}
+
+NotFoundCounter++
+if (Mod(NotFoundCounter, 2) = 0) {
+    MouseMove, X+180, Y+380
+    MouseClick, left
+}
+
+return

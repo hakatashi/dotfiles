@@ -2,7 +2,6 @@
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
-    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Base16 Dark Colors",
     "editor.renderWhitespace": "boundary",
     "vsicons.dontShowNewVersionMessage": true,
@@ -62,5 +61,20 @@
     "files.associations": {
         "*.sage": "python"
     },
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "vsonline.authentication.accountProvider": "Microsoft",
+    "remote.SSH.remotePlatform": {
+        "ec2-46-51-234-136.ap-northeast-1.compute.amazonaws.com": "linux",
+        "ec2-3-112-19-198.ap-northeast-1.compute.amazonaws.com": "linux"
+    },
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "vsonline.accountProvider": "Microsoft",
+    "codespaces.accountProvider": "Microsoft",
+    "python.autoComplete.extraPaths": [
+        "C:\\Python28\\Lib\\site-packages"
+    ]
 }

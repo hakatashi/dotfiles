@@ -96,5 +96,15 @@
     {
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "numpad0",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Test"
+    },
+    {
+        "key": "numpad_decimal",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Submit"
     }
 ]
