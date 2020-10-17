@@ -1,80 +1,56 @@
 {
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
     "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "workbench.colorTheme": "Base16 Dark Colors",
-    "editor.renderWhitespace": "boundary",
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.renderControlCharacters": true,
-    "editor.fontFamily": "Ricty Diminished with Fira Code",
-    "editor.fontLigatures": true,
-    "editor.tabSize": 2,
-    "editor.lineHeight": 13,
+    "backgroundCover.autoStatus": true,
+    "backgroundCover.imagePath": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\2020年5月1日\\81187209_p0.jpg",
+    "backgroundCover.opacity": 0.6,
+    "backgroundCover.randomImageFolder": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\2020年5月1日",
     "code-runner.saveFileBeforeRun": true,
-    "zentabs.applyLimitFor": "editorGroup",
+    "codespaces.accountProvider": "Microsoft",
     "crystal-lang.bashOnWindows": true,
+    "crystal-lang.compiler": "crystal.bat",
     "crystal-lang.completion": true,
     "crystal-lang.hover": true,
     "crystal-lang.implementations": true,
     "crystal-lang.problems": "build",
-    "crystal-lang.compiler": "crystal.bat",
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "vue",
-            "autoFix": true
-        }
-    ],
-    "python.insidersChannel": "off",
-    "vim.useCtrlKeys": false,
-    "eslint.autoFixOnSave": true,
-    "window.zoomLevel": 0,
-    "files.exclude": {
-        "**/*.meta": true
-    },
-    "zentabs.maximumOpenedTabs": 6,
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "editor.fontFamily": "Ricty Diminished with Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "editor.lineHeight": 13,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "vue"
+    ],
+    "files.exclude": {
+        "**/*.meta": true
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "liveshare.presence": true,
     "problems.showCurrentInStatus": true,
+    "python.insidersChannel": "off",
+    "sync.gist": "",
     "task.autoDetect": "off",
-    "backgroundCover.randomImageFolder": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images",
-    "backgroundCover.imagePath": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\random.png",
-    "sync.gist": "bca29129917461a55a190f58da8b7ce1",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "vim.useCtrlKeys": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Base16 Dark Colors",
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 6,
     "workbench.editor.limit.perEditorGroup": true,
-    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.limit.value": 6,
     "workbench.editor.tabSizing": "shrink",
-    "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
-    "window.openFoldersInNewWindow": "off",
-    "window.openWithoutArgumentsInNewWindow": "off",
-    "files.associations": {
-        "*.sage": "python"
-    },
-    "editor.minimap.enabled": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
-    "vsonline.authentication.accountProvider": "Microsoft",
-    "remote.SSH.remotePlatform": {
-        "ec2-46-51-234-136.ap-northeast-1.compute.amazonaws.com": "linux",
-        "ec2-3-112-19-198.ap-northeast-1.compute.amazonaws.com": "linux"
-    },
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "vsonline.accountProvider": "Microsoft",
-    "codespaces.accountProvider": "Microsoft",
-    "python.autoComplete.extraPaths": [
-        "C:\\Python28\\Lib\\site-packages"
-    ]
+    "workbench.iconTheme": "vscode-icons",
+    "zentabs.maximumOpenedTabs": 12
 }
