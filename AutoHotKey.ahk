@@ -169,8 +169,10 @@ state := 1 ;
 ;Up::SendInput ��
 ;Down::SendInput ��
 
-#A::SetTimer, AutoJam, 20000
-#Q::SetTimer, AutoJam, Off
+#A::SetTimer, AutoIdolProduce, 000
+#Q::SetTimer, AutoIdolProduce, Off
+
+;Space::Click
 
 FoundSuperLive := false
 
