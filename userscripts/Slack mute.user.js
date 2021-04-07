@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+const mutedUsers = ['UA3H39U3T']
+
 /**
  * lodash (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -418,12 +420,12 @@ function toNumber(value) {
         lastMessage.firstElementChild.classList.add('c-message--last');
     }, 300);
     const update = () => {
-        const names = Array.from(document.querySelectorAll('.c-message__sender_link')).filter((e) => e.textContent === 'Szkieletor');
+        const names = Array.from(document.querySelectorAll('.c-message__sender_link')).filter((e) => mutedUsers.some((user) => (e.href || '').endsWith(user)));
         for (const name of names) {
             let message = name.closest('.c-virtual_list__item');
             message.style.display = 'none';
             while ((message = message.nextSibling)) {
-                if (message.firstElementChild.classList.contains('c-message--adjacent')) {
+                if (message.querySelector('.c-message_kit__actions--above') !== null) {
                     message.style.display = 'none';
                 } else {
                     break;
