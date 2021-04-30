@@ -20,9 +20,10 @@
 
 		GM_xmlhttpRequest({
 			method: 'POST',
-			url: 'https://xg38xzc437.execute-api.us-east-1.amazonaws.com/dev/post-session',
+			url: 'https://co791uc66h.execute-api.ap-northeast-1.amazonaws.com/production/post-session',
 			data: JSON.stringify({
 				apikey,
+                id: 'pixiv',
 				session: session.value,
 			}),
 			headers: {
