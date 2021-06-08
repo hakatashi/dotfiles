@@ -46,7 +46,6 @@
     "task.autoDetect": "off",
     "vim.useCtrlKeys": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "Base16 Dark Colors",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
@@ -60,12 +59,9 @@
     "[javascript]": {
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "[html]": {
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
@@ -80,5 +76,9 @@
             "password": "{{put-password-here}}"
         }
     ],
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }
 }
