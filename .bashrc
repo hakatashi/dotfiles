@@ -81,6 +81,7 @@ alias dm='docker-machine'
 alias dc='docker-compose'
 alias a='atom .'
 alias v='code-insiders --add .'
+alias drun='docker run -it --rm -v $PWD:/code -w /code'
 
 alias weather='curl wttr.in'
 

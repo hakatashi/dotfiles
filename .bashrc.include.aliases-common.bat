@@ -37,6 +37,7 @@ doskey dm=docker-machine $*
 doskey dc=docker-compose $*
 doskey a=atom . $*
 doskey v=code-insiders --add . $*
+doskey drun=docker run -it --rm -v %CD%:/code -w /code $*
 
 doskey weather=curl wttr.in/$1
 
@@ -44,7 +45,7 @@ doskey wresume=wget --content-disposition --continue --retry-connrefused --tries
 
 doskey va=cmd /C "vagrant up && vagrant ssh"
 
-doskey ‚É‚á[‚ñ=yarn $*
+doskey ï¿½É‚ï¿½[ï¿½ï¿½=yarn $*
 
 :: I'm in Windows now
 doskey which=where $*
