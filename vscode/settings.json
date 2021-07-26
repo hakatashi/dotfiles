@@ -57,7 +57,7 @@
     "csharp.suppressDotnetInstallWarning": true,
     "csharp.suppressDotnetRestoreNotification": true,
     "[javascript]": {
-        "editor.defaultFormatter": "numso.prettier-standard-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -80,5 +80,15 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
-    }
+    },
+    "terminal.integrated.scrollback": 100000,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "python.showStartPage": false,
+    "terminal.integrated.tabs.enabled": false
 }
