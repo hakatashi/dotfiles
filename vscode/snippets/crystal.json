@@ -63,6 +63,26 @@
 		],
 		"description": "Insert do-end block without argument list"
 	},
+	"min function": {
+		"prefix": "min",
+		"body": [
+			"@[AlwaysInline]",
+			"def min(a, b)",
+			"\ta < b ? a : b",
+			"end"
+		],
+		"description": "Insert definition of min function"
+	},
+	"max function": {
+		"prefix": "max",
+		"body": [
+			"@[AlwaysInline]",
+			"def max(a, b)",
+			"\ta > b ? a : b",
+			"end"
+		],
+		"description": "Insert definition of max function"
+	},
 	"do-end block": {
 		"prefix": "do",
 		"body": [
