@@ -202,5 +202,10 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
     export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
 fi
 
+# Setup Cargo
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
