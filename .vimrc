@@ -154,7 +154,7 @@ endif
 if has('unix') && !has('gui_running')
   let s:uname = system('uname')
   if s:uname =~? "linux"
-    set term=builtin_linux
+    set term=xterm-256color
   elseif s:uname =~? "freebsd"
     set term=builtin_cons25
   elseif s:uname =~? "Darwin"
