@@ -110,8 +110,9 @@ fi
 
 export EDITOR=vim
 
-source ~/.bash/.git-completion.bash
-source ~/.bash/.git-prompt.sh
+for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
+    source $file
+done
 
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
