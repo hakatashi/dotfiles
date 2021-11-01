@@ -81,6 +81,7 @@ alias dm='docker-machine'
 alias dc='docker-compose'
 alias a='atom .'
 alias v='code-insiders --add .'
+alias drun='docker run -it --rm -v $PWD:/code -w /code'
 
 alias weather='curl wttr.in'
 
@@ -202,5 +203,12 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
     export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
 fi
 
+# Setup Cargo
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:$HOME/.local/bin"

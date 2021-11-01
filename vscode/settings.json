@@ -4,13 +4,12 @@
     },
     "atomKeymap.promptV3Features": true,
     "backgroundCover.autoStatus": true,
-    "backgroundCover.imagePath": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\2020年5月1日\\81163049_p1.jpg",
+    "backgroundCover.imagePath": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\2020年5月1日\\81176696_p4.jpg",
     "backgroundCover.opacity": 0.6,
     "backgroundCover.randomImageFolder": "c:\\Users\\denjj\\Documents\\GitHub\\pixivwall\\images\\2020年5月1日",
     "code-runner.saveFileBeforeRun": true,
     "codespaces.accountProvider": "Microsoft",
     "crystal-lang.bashOnWindows": true,
-    "crystal-lang.compiler": "crystal.bat",
     "crystal-lang.completion": true,
     "crystal-lang.hover": true,
     "crystal-lang.implementations": true,
@@ -35,6 +34,9 @@
     "files.exclude": {
         "**/*.meta": true
     },
+    "files.associations": {
+        "*.sage": "python"
+    },
     "git.autofetch": true,
     "git.confirmSync": false,
     "liveshare.presence": true,
@@ -42,10 +44,8 @@
     "python.insidersChannel": "off",
     "sync.gist": "",
     "task.autoDetect": "off",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
     "vim.useCtrlKeys": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "Base16 Dark Colors",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
@@ -57,18 +57,38 @@
     "csharp.suppressDotnetInstallWarning": true,
     "csharp.suppressDotnetRestoreNotification": true,
     "[javascript]": {
-        "editor.defaultFormatter": "numso.prettier-standard-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "[html]": {
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
     "remote.SSH.remotePlatform": {
         "tsg": "linux"
-    }
+    },
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
+    "C_Cpp.updateChannel": "Insiders",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "terminal.integrated.scrollback": 100000,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "python.showStartPage": false,
+    "terminal.integrated.tabs.enabled": false
 }
