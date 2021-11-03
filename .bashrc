@@ -123,7 +123,14 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-PS1='[\[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
+get_datetime_color () {
+    if [ $? = 0 ]; then
+        echo 30
+    else
+        echo 31
+    fi
+}
+PS1='\n[\[\e[1;34m\]\w\[\e[m\] \[\e[1;$(get_datetime_color)m\]\t\[\e[m\]]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]\n\$ '
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
