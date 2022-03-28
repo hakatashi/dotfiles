@@ -90,5 +90,6 @@
         "markdown": false
     },
     "python.showStartPage": false,
-    "terminal.integrated.tabs.enabled": false
+    "terminal.integrated.tabs.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }

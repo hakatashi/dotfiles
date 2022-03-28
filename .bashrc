@@ -93,6 +93,8 @@ alias e='open .'
 alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
 alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
 
+alias ntp='sudo sntp -sS ntp.nict.jp'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -135,7 +137,7 @@ PS1='\n[\[\e[1;34m\]\w\[\e[m\] \[\e[1;$(get_datetime_color)m\]\t\[\e[m\]]\[\e[0;
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
-[[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # alias hub to git if exists
 if hash hub 2> /dev/null; then
