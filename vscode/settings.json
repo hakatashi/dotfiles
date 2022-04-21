@@ -66,7 +66,8 @@
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
     "remote.SSH.remotePlatform": {
-        "tsg": "linux"
+        "tsg": "linux",
+        "rainbow": "linux"
     },
     "mssql.connections": [
         {
