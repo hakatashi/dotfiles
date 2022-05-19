@@ -1,6 +1,7 @@
 [core]
 	sparsecheckout = true
 	pager =
+	hooksPath = ~/.config/git/hooks
 [user]
 	name = Koki Takahashi
 	email = hakatasiloving@gmail.com
