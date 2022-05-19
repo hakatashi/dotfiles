@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source `dirname ${0}`/_local-hook-exec
+
+log () {
+  echo -e '\033[1;36m[POST-COMMIT]\033[m' $1
+}
+
+if [ -z "${GIT_COMMITTER_DATE:-}" ]; then
+  log "Start amending..."
+
+  day=$(date +%u)
+  log "Today's day of the week = $day"
+
+  if [ $day = 6 ] || [ $day = 7 ]; then
+    log "Today is weekend. Happy coding :)"
+  else
+    unix_time=$(date +%s)
+    time_from_last_evening=$(((unix_time + 11 * 3600) % 86400))
+    last_evening=$((unix_time - time_from_last_evening))
+    commit_time=$((last_evening + time_from_last_evening / 2))
+    log "Commit Time: $(date -r $commit_time)"
+    d="$commit_time +0000"
+    GIT_COMMITTER_DATE="$d" GIT_AUTHOR_DATE="$d" git commit --amend --date "$d" --no-edit
+  fi
+fi
