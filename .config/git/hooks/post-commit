@@ -16,8 +16,9 @@ if [ -z "${GIT_COMMITTER_DATE:-}" ]; then
     log "Today is weekend. Happy coding :)"
   else
     unix_time=$(date +%s)
-    time_from_last_evening=$(((unix_time + 11 * 3600) % 86400))
+    time_from_last_evening=$(((unix_time + 13 * 3600) % 86400))
     last_evening=$((unix_time - time_from_last_evening))
+    log "Last evening = $(date -r $last_evening)"
     commit_time=$((last_evening + time_from_last_evening / 2))
     log "Commit Time: $(date -r $commit_time)"
     d="$commit_time +0000"
