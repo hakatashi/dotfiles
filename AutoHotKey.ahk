@@ -101,6 +101,13 @@ sc073::\
     return
 #if
 
+F6::
+If (state)
+  state := 0
+else
+  state := 1
+return
+
 ; My laptop keyboard has been fixed :)
 sc07b::Space
 
@@ -117,7 +124,7 @@ SetTitleMatchMode, 2
 #IfWinActive
 
 ;     QWERTY-Dvorak Toggle using ScrollLock key
-state := 1 ;
+state := 1
 
 #If state=1
     #HotkeyInterval 1000000000
