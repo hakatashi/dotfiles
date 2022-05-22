@@ -37,6 +37,8 @@ Pause::Media_Play_Pause
     9::F9
     0::F10
 
+    q::Click
+
     Space::Media_Play_Pause
     Left::Media_Prev
     Right::Media_Next
