@@ -62,6 +62,13 @@ Pause::Media_Play_Pause
     else
        state := 1
     return
+
+    b::
+    If (joyinput)
+       joyinput := 0
+    else
+       joyinput := 1
+    return
 #If
 
 ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
@@ -166,10 +173,18 @@ state := 1 ;
     ^RWin::_
 #If
 
-;Left::SendInput ��
-;Right::SendInput �E
-;Up::SendInput ��
-;Down::SendInput ��
+joyinput := 0
+#If joyinput=1
+    Joy3::Click, WheelUp
+    Joy1::Click
+    Joy2::Click, Right
+    Joy6::F6
+#If
+
+;Left::SendInput   
+;Right::SendInput  E
+;Up::SendInput   
+;Down::SendInput   
 
 #A::SetTimer, AutoIdolProduce, 000
 #Q::SetTimer, AutoIdolProduce, Off
