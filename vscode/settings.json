@@ -108,5 +108,8 @@
     "cmake.configureOnOpen": false,
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
-    }
+    },
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ]
 }
