@@ -104,5 +104,9 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "workbench.colorTheme": "Base16 Dark Colors"
+    "workbench.colorTheme": "Base16 Dark Colors",
+    "cmake.configureOnOpen": false,
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
