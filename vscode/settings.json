@@ -111,5 +111,6 @@
     },
     "remote.SSH.defaultExtensions": [
         "gitpod.gitpod-remote-ssh"
-    ]
+    ],
+    "editor.fontSize": 15
 }
