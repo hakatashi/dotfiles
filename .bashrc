@@ -223,5 +223,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.local/bin"
 
-# temporarily disable ssh-agent, since it hangs on macOS
-unset SSH_AUTH_SOCK
+# temporarily disable ssh-agent on macOS, since it hangs
+if [[ $OSTYPE == 'darwin'* ]]; then
+    unset SSH_AUTH_SOCK
+fi
