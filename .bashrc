@@ -112,10 +112,6 @@ fi
 
 export EDITOR=vim
 
-for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
-    source $file
-done
-
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -227,3 +223,8 @@ export PATH="$PATH:$HOME/.local/bin"
 if [[ $OSTYPE == 'darwin'* ]]; then
     unset SSH_AUTH_SOCK
 fi
+
+# Override configuration by .bash subdirectory
+for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
+    source $file
+done
