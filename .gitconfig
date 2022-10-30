@@ -32,6 +32,7 @@
 	shoe = show
 	pull = pull --recurse-submodules
 	unstage = restore --staged
+	history = log -p
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
