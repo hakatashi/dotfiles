@@ -31,6 +31,7 @@
 	clone = clone --recursive --recurse-submodules -j8
 	shoe = show
 	pull = pull --recurse-submodules
+	unstage = restore --staged
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
