@@ -208,6 +208,11 @@ if [ -d "$HOME/.asdf/asdf.sh" ]; then
     . "$HOME/.asdf/asdf.sh"
 fi
 
+# Setup cargo
+if [ -d "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
