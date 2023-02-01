@@ -210,7 +210,7 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
 fi
 
 # Setup asdf
-if [ -d "$HOME/.asdf/asdf.sh" ]; then
+if [ -d "$HOME/.asdf" ]; then
     . "$HOME/.asdf/asdf.sh"
 fi
 
