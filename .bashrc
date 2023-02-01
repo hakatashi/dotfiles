@@ -93,6 +93,8 @@ alias e='open .'
 alias rawrec='rec -t raw -b 16 -c 1 -e s -r 24000 -'
 alias rawplay='play -t raw -b 16 -c 1 -e s -r 24000 -'
 
+alias ntp='sudo sntp -sS ntp.nict.jp'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -110,9 +112,6 @@ fi
 
 export EDITOR=vim
 
-source ~/.bash/.git-completion.bash
-source ~/.bash/.git-prompt.sh
-
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -123,11 +122,18 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-PS1='[\[\e[1;34m\]\w\[\e[m\]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]]\$ '
+get_datetime_color () {
+    if [ $? = 0 ]; then
+        echo 30
+    else
+        echo 31
+    fi
+}
+PS1='\n[\[\e[1;34m\]\w\[\e[m\] \[\e[1;$(get_datetime_color)m\]\t\[\e[m\]]\[\e[0;32m\]$(__git_ps1 " (%s)")\[\e[m\]\n\$ '
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-isotope.dark.sh"
-[[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # alias hub to git if exists
 if hash hub 2> /dev/null; then
@@ -151,7 +157,7 @@ fi
 if [ -d "$HOME/.pyenv" ]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
     if [ -d "$PYENV_ROOT/plugins/pyenv-virtualenv" ]; then
         eval "$(pyenv virtualenv-init -)"
     fi
@@ -208,12 +214,22 @@ if [ -d "$HOME/.asdf/asdf.sh" ]; then
     . "$HOME/.asdf/asdf.sh"
 fi
 
-# Setup cargo
-if [ -d "$HOME/.cargo/env" ]; then
-    . "$HOME/.cargo/env"
+# Setup Cargo
+if [ -d "$HOME/.cargo" ]; then
+    source "$HOME/.cargo/env"
 fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.local/bin"
+
+# temporarily disable ssh-agent on macOS, since it hangs
+if [[ $OSTYPE == 'darwin'* ]]; then
+    unset SSH_AUTH_SOCK
+fi
+
+# Override configuration by .bash subdirectory
+for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
+    source $file
+done

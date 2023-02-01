@@ -210,7 +210,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+Y=Home",
+                                "description": "Fn+Y=Cmd+Left",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
@@ -224,7 +224,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "home"
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -234,7 +237,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+O=End",
+                                "description": "Fn+O=Cmd+Right",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
@@ -248,7 +251,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "end"
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -282,7 +288,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Fn+;=Ctrl+Space",
+                                "description": "Fn+;=Option+Space",
                                 "from": {
                                     "key_code": "semicolon",
                                     "modifiers": {
@@ -298,11 +304,59 @@
                                     {
                                         "key_code": "spacebar",
                                         "modifiers": [
-                                            "left_control"
+                                            "left_option"
                                         ]
                                     }
                                 ],
                                 "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Fn+Up=Volume Up",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "volume_increment"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Fn+Down=Volume Down",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "volume_decrement"
+                                    }
+                                ]
                             }
                         ]
                     }

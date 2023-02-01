@@ -64,7 +64,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'deton/jasegment.vim'
-NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'StanAngeloff/php.vim'
@@ -81,7 +80,6 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vim-scripts/smarty-syntax'
 NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'shawncplus/phpcomplete.vim'
 NeoBundle 'vim-scripts/po.vim--Jelenak'
 NeoBundle 'vim-scripts/AfterColors.vim'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
@@ -227,7 +225,6 @@ nmap <silent> k gk
 
 " source $VIMRUNTIME/mswin.vim
 
-let g:neocomplcache_enable_at_startup = 1
 let g:airline_section_a = airline#section#create(['mode','','branch'])
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0

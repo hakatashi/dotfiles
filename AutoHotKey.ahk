@@ -37,6 +37,8 @@ Pause::Media_Play_Pause
     9::F9
     0::F10
 
+    q::Click
+
     Space::Media_Play_Pause
     Left::Media_Prev
     Right::Media_Next
@@ -59,6 +61,13 @@ Pause::Media_Play_Pause
        state := 0
     else
        state := 1
+    return
+
+    b::
+    If (joyinput)
+       joyinput := 0
+    else
+       joyinput := 1
     return
 #If
 
@@ -92,6 +101,13 @@ sc073::\
     return
 #if
 
+F6::
+If (state)
+  state := 0
+else
+  state := 1
+return
+
 ; My laptop keyboard has been fixed :)
 sc07b::Space
 
@@ -108,7 +124,7 @@ SetTitleMatchMode, 2
 #IfWinActive
 
 ;     QWERTY-Dvorak Toggle using ScrollLock key
-state := 1 ;
+state := 1
 
 #If state=1
     #HotkeyInterval 1000000000
@@ -164,10 +180,18 @@ state := 1 ;
     ^RWin::_
 #If
 
-;Left::SendInput ��
-;Right::SendInput �E
-;Up::SendInput ��
-;Down::SendInput ��
+joyinput := 0
+#If joyinput=1
+    Joy3::Click, WheelUp
+    Joy1::Click
+    Joy2::Click, Right
+    Joy6::F6
+#If
+
+;Left::SendInput   
+;Right::SendInput  E
+;Up::SendInput   
+;Down::SendInput   
 
 #A::SetTimer, AutoIdolProduce, 000
 #Q::SetTimer, AutoIdolProduce, Off

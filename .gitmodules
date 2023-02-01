@@ -7,3 +7,6 @@
 [submodule ".bundle/git-fire"]
 	path = .bundle/git-fire
 	url = https://github.com/qw3rtman/git-fire.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

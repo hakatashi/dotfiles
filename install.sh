@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=".bash .config .vim .bashrc .editorconfig .gitconfig .gvimrc .inputrc .tmux.conf .uncrustify.cfg .vimrc .Xmodmap .zshrc"
+files=".bash .config .vim .bashrc .bash_profile .editorconfig .gitconfig .gvimrc .inputrc .tmux.conf .uncrustify.cfg .vimrc .Xmodmap .zshrc"
 
 mkdir -p ~/dotfiles.backup
 cd `dirname $0`

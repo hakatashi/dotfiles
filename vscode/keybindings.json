@@ -39,11 +39,11 @@
     },
     {
         "key": "alt+home",
-        "command": "workbench.action.focusFirstEditorGroup"
+        "command": "workbench.action.focusActiveEditorGroup"
     },
     {
         "key": "alt+end",
-        "command": "workbench.action.focusPanel"
+        "command": "terminal.focus"
     },
     {
         "key": "ctrl+k ctrl+right",
@@ -90,5 +90,29 @@
     {
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "git.sync"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.splitInstance",
+        "when": "terminalProcessSupported && terminalTabsFocus"
     }
 ]

@@ -1,6 +1,7 @@
 [core]
 	sparsecheckout = true
 	pager =
+	hooksPath = ~/.config/git/hooks
 [user]
 	name = Koki Takahashi
 	email = hakatasiloving@gmail.com
@@ -30,6 +31,8 @@
 	clone = clone --recursive --recurse-submodules -j8
 	shoe = show
 	pull = pull --recurse-submodules
+	unstage = restore --staged
+	history = log -p
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

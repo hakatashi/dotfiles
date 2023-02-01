@@ -46,7 +46,6 @@
     "task.autoDetect": "off",
     "vim.useCtrlKeys": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "Base16 Dark Colors",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 6,
@@ -66,14 +65,16 @@
         "editor.defaultFormatter": "numso.prettier-standard-vscode"
     },
     "remote.SSH.remotePlatform": {
-        "tsg": "linux"
+        "tsg": "linux",
+        "rainbow": "linux",
+        "sail": "linux"
     },
     "mssql.connections": [
         {
             "server": "{{put-server-name-here}}",
             "database": "{{put-database-name-here}}",
             "user": "{{put-username-here}}",
-            "password": "{{put-password-here}}"
+            "password": ""
         }
     ],
     "C_Cpp.updateChannel": "Insiders",
@@ -86,9 +87,30 @@
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
-        "plaintext": false,
+        "plaintext": true,
         "markdown": false
     },
     "python.showStartPage": false,
-    "terminal.integrated.tabs.enabled": false
+    "terminal.integrated.tabs.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.defaultCloneDirectory": "C:\\Users\\denjj\\Documents\\GitHub",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.colorTheme": "Base16 Dark Colors",
+    "cmake.configureOnOpen": false,
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ],
+    "editor.fontSize": 15
 }

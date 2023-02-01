@@ -83,6 +83,13 @@
 		],
 		"description": "Insert definition of max function"
 	},
+	"requirement of atcoder libraries": {
+		"prefix": "req",
+		"body": [
+			"require \"./lib/atcoder/src/${1:Class}.cr\""
+		],
+		"description": "Insert definition of max function"
+	},
 	"do-end block": {
 		"prefix": "do",
 		"body": [
