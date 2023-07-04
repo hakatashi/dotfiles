@@ -214,11 +214,6 @@ if [ -d "$HOME/.cargo" ]; then
     source "$HOME/.cargo/env"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH="$PATH:$HOME/.local/bin"
-
 # temporarily disable ssh-agent on macOS, since it hangs
 if [[ $OSTYPE == 'darwin'* ]]; then
     unset SSH_AUTH_SOCK
@@ -228,3 +223,8 @@ fi
 for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
     source $file
 done
+
+# Add /usr/games to PATH
+if [ -d "/usr/games" ]; then
+    export PATH="/usr/games:$PATH"
+fi
