@@ -209,6 +209,11 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
     export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
 fi
 
+# Setup asdf
+if [ -d "$HOME/.asdf" ]; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
 # Setup Cargo
 if [ -d "$HOME/.cargo" ]; then
     source "$HOME/.cargo/env"
