@@ -219,11 +219,6 @@ if [ -d "$HOME/.cargo" ]; then
     source "$HOME/.cargo/env"
 fi
 
-# temporarily disable ssh-agent on macOS, since it hangs
-if [[ $OSTYPE == 'darwin'* ]]; then
-    unset SSH_AUTH_SOCK
-fi
-
 # Override configuration by .bash subdirectory
 for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
     source $file
