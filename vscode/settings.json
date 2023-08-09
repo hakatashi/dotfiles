@@ -112,5 +112,9 @@
     "remote.SSH.defaultExtensions": [
         "gitpod.gitpod-remote-ssh"
     ],
-    "editor.fontSize": 15
+    "editor.fontSize": 15,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.startupEditor": "none"
 }
