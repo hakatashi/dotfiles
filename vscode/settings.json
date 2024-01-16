@@ -1,6 +1,6 @@
 {
     "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+        "editor.defaultFormatter": "xaver.clang-format"
     },
     "atomKeymap.promptV3Features": true,
     "backgroundCover.autoStatus": true,
@@ -91,7 +91,6 @@
         "markdown": false
     },
     "python.showStartPage": false,
-    "terminal.integrated.tabs.enabled": false,
     "go.toolsManagement.autoUpdate": true,
     "security.workspace.trust.untrustedFiles": "open",
     "git.defaultCloneDirectory": "C:\\Users\\denjj\\Documents\\GitHub",
@@ -112,5 +111,15 @@
     "remote.SSH.defaultExtensions": [
         "gitpod.gitpod-remote-ssh"
     ],
-    "editor.fontSize": 15
+    "editor.fontSize": 15,
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.tabs.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "firestorerules.usePrettierFormatter": true,
+    "rust.ignore_deprecation_warning": true,
+    "[yaml]": {
+        "editor.wordWrap": "on"
+    }
 }

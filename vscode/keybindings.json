@@ -114,5 +114,10 @@
         "key": "ctrl+shift+5",
         "command": "-workbench.action.terminal.splitInstance",
         "when": "terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-inlineChat.start",
+        "when": "inlineChatHasProvider && !editorReadonly"
     }
 ]
