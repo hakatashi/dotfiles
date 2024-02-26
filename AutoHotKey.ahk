@@ -193,6 +193,16 @@ joyinput := 0
 ;Up::SendInput   
 ;Down::SendInput   
 
+#F12::
+    Run *RunAs pnputil.exe /disable-device "USB\VID_0F0D&PID_00DC&IG_00\6&37C3E9E8&1&00"
+    Sleep 1000
+    SendMessage 0x112, 0xF170, 2, , Program Manager  ; Monitor off
+    Return
+
+#+F12::
+    Run *RunAs pnputil.exe /enable-device "USB\VID_0F0D&PID_00DC&IG_00\6&37C3E9E8&1&00"
+    Return
+
 #A::SetTimer, AutoIdolProduce, 000
 #Q::SetTimer, AutoIdolProduce, Off
 
