@@ -127,5 +127,15 @@
         "key": "ctrl+i",
         "command": "-inlineChat.start",
         "when": "inlineChatHasProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "inlineChat.start",
+        "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-inlineChat.start",
+        "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
     }
 ]
