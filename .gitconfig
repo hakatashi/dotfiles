@@ -46,3 +46,5 @@
 	pushInsteadOf = https://gist.github.com/
 [credential]
 	helper = wincred
+[safe]
+	directory = *
