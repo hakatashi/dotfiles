@@ -42,7 +42,15 @@
         "command": "workbench.action.focusActiveEditorGroup"
     },
     {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
         "key": "alt+end",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "ctrl+alt+right",
         "command": "terminal.focus"
     },
     {

@@ -112,10 +112,6 @@ fi
 
 export EDITOR=vim
 
-for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
-    source $file
-done
-
 # Enable `npm -g` without sudo
 # Thanks: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -213,15 +209,22 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
     export DOCKER_CERT_PATH=/mnt/c/Users/denjj/.docker/machine/machines/default
 fi
 
+# Setup asdf
+if [ -d "$HOME/.asdf" ]; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
 # Setup Cargo
 if [ -d "$HOME/.cargo" ]; then
     source "$HOME/.cargo/env"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# Override configuration by .bash subdirectory
+for file in `ls ~/.bash/{.*,*}.{sh,bash} 2> /dev/null`; do
+    source $file
+done
 
-export PATH="$PATH:$HOME/.local/bin"
-
-# temporarily disable ssh-agent, since it hangs on macOS
-unset SSH_AUTH_SOCK
+# Add /usr/games to PATH
+if [ -d "/usr/games" ]; then
+    export PATH="/usr/games:$PATH"
+fi

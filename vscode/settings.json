@@ -121,5 +121,6 @@
     "rust.ignore_deprecation_warning": true,
     "[yaml]": {
         "editor.wordWrap": "on"
-    }
+    },
+    "workbench.startupEditor": "none"
 }
