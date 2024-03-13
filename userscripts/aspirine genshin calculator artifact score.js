@@ -36,7 +36,8 @@ const artifactSelector = '.artifact-big-block';
 
   const updateScore = (node) => {
     const subStatEls = node.querySelectorAll('.sub-stat > .value');
-    let score = 0;
+    let attackScore = 0;
+    let defenceScore = 0;
 
     for (const subStatEl of subStatEls) {
       const statName = subStatEl.getElementsByClassName('stat-name')[0]?.textContent?.trim?.();
@@ -47,24 +48,38 @@ const artifactSelector = '.artifact-big-block';
       }
 
       if (statName === 'Crit. Rate') {
-        score += parseFloat(statValue) * 2;
+        attackScore += parseFloat(statValue) * 2;
+        defenceScore += parseFloat(statValue) * 2;
       }
 
       if (statName === 'Crit. DMG') {
-        score += parseFloat(statValue);
+        attackScore += parseFloat(statValue);
+        defenceScore += parseFloat(statValue);
       }
 
       if (statName === 'ATK' && statValue.endsWith('%')) {
-        score += parseFloat(statValue);
+        attackScore += parseFloat(statValue);
+      }
+
+      if (statName === 'DEF' && statValue.endsWith('%')) {
+        defenceScore += parseFloat(statValue) * 0.8;
       }
     }
 
-    artifactScoreMap.set(node, score);
+    let artifactScore;
+    if (attackScore >= defenceScore) {
+      artifactScore = {score: attackScore, type: 'attack'};
+    } else {
+      artifactScore = {score: defenceScore, type: 'defence'};
+    }
+
+    artifactScoreMap.set(node, artifactScore);
 
     const mainStatEl = node.querySelector('.main-stat');
     const scoreEl = mainStatEl.querySelector('.score > span');
     if (scoreEl) {
-      scoreEl.textContent = score.toFixed(1);
+      scoreEl.textContent = artifactScore.score.toFixed(1);
+      scoreEl.style.color = artifactScore.type === 'attack' ? 'yellow' : 'coral';
     } else {
       const newScoreEl = document.createElement('div');
       newScoreEl.classList.add('score');
@@ -74,8 +89,8 @@ const artifactSelector = '.artifact-big-block';
       newScoreEl.style.fontSize = '0.8em';
 
       const scoreTextEl = document.createElement('span');
-      scoreTextEl.textContent = score.toFixed(1);
-      scoreTextEl.style.color = 'yellow';
+      scoreTextEl.textContent = artifactScore.score.toFixed(1);
+      scoreTextEl.style.color = artifactScore.type === 'attack' ? 'yellow' : 'coral';
 
       newScoreEl.appendChild(scoreTextEl);
       mainStatEl.appendChild(newScoreEl);
@@ -91,7 +106,8 @@ const artifactSelector = '.artifact-big-block';
     const artifactEls = totalScoreEl.parentElement.querySelectorAll(artifactSelector);
     let totalScore = 0;
     for (const artifactEl of artifactEls) {
-      totalScore += artifactScoreMap.get(artifactEl) ?? 0;
+      const artifactScore = artifactScoreMap.get(artifactEl) ?? {score: 0, type: 'attack'};
+      totalScore += artifactScore.score;
     }
 
     totalScoreValueEl.textContent = totalScore.toFixed(1);
