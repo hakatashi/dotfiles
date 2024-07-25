@@ -209,6 +209,7 @@ fi
 # Setup asdf
 if [ -d "$HOME/.asdf" ]; then
     . "$HOME/.asdf/asdf.sh"
+    . "$HOME/.asdf/completions/asdf.bash"
 fi
 
 # Setup Cargo
@@ -226,8 +227,3 @@ if [ -d "/usr/games" ]; then
     export PATH="/usr/games:$PATH"
 fi
 
-# Add /usr/games to PATH
-if [ -d "$HOME/.asdf" ]; then
-    . "$HOME/.asdf/asdf.sh"
-    . "$HOME/.asdf/completions/asdf.bash"
-fi
