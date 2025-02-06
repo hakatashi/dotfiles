@@ -1,0 +1,9 @@
+{
+	"HTML Ruby": {
+		"prefix": "ruby",
+		"body": [
+			"<ruby><rb>$1</rb><rp> (</rp><rt>$2</rt><rp>)</rp></ruby>",
+		],
+		"description": "HTML Ruby"
+	}
+}
