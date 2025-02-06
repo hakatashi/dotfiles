@@ -48,3 +48,5 @@
 	helper = wincred
 [safe]
 	directory = *
+[init]
+	defaultBranch = main
