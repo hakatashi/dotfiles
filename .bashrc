@@ -207,9 +207,9 @@ if [ -d "/mnt/c/Users/denjj/.docker/machine/machines/default" ]; then
 fi
 
 # Setup asdf
-if [ -d "$HOME/.asdf" ]; then
-    . "$HOME/.asdf/asdf.sh"
-    . "$HOME/.asdf/completions/asdf.bash"
+if [ -d "${ASDF_DATA_DIR:-$HOME/.asdf}" ]; then
+    export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+    . <(asdf completion bash)
 fi
 
 # Setup Cargo
