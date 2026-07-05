@@ -44,9 +44,9 @@
 [url "git@gist.github.com:"]
 	pushInsteadOf = git://gist.github.com/
 	pushInsteadOf = https://gist.github.com/
-[credential]
-	helper = wincred
 [safe]
 	directory = *
 [init]
 	defaultBranch = main
+[credential]
+	helper = store
