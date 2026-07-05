@@ -227,3 +227,16 @@ if [ -d "/usr/games" ]; then
     export PATH="/usr/games:$PATH"
 fi
 
+
+# Created by `pipx` on 2025-10-06 14:19:07
+export PATH="$PATH:/home/hakatashi/.local/bin"
+. "$HOME/.cargo/env"
+
+# Set GITHUB_TOKEN from gh CLI if available
+if hash gh 2>/dev/null; then
+    export GITHUB_TOKEN=$(gh auth token)
+fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/hakatashi/.local/bin:$PATH"
