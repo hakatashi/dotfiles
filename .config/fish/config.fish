@@ -111,3 +111,7 @@ function fish_title
         echo $_
     end
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/hakatashi/.local/bin" $PATH
