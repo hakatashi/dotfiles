@@ -15,7 +15,7 @@ Pause::Media_Play_Pause
     i::PgUp
     o::End
     p::Insert
-    `;::vkF4
+    ; `;::vkF4
 
     m::Send +{F10}
     ,::(
@@ -71,8 +71,6 @@ Pause::Media_Play_Pause
     return
 #If
 
-ScrollLock & Esc::DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
-
 ^SPACE::  Winset, Alwaysontop, , A
 
 #If !WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive("ahk_exe soffice.bin")
@@ -101,6 +99,14 @@ sc073::\
     return
 #if
 
+; Hearts of Iron IV WASD to Arrow Keys
+#If WinActive("ahk_exe hoi4.exe")
+    w::Up
+    a::Left
+    s::Down
+    d::Right
+#If
+
 F6::
 If (state)
   state := 0
@@ -112,7 +118,7 @@ return
 sc07b::Space
 
 sc079::Space
-sc070::^
+; sc070::^
 
 RAlt::\
 ;     SetTitleMatch mode 2 enables AutoHotkey to only partially match program names, must be in the beginning of the script
@@ -168,6 +174,7 @@ state := 1
     .::v
     /::z
     sc029::`
+    ; ^::~
     +sc029::~
     +2::Send @
     +6::Send {^}
